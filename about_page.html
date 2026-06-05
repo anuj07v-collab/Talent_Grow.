@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instructor Profile Hub - TalentGrow</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="./style/about_page.css" />
+  </head>
+  <body>
+
+    <!-- ================= NAVBAR LINKAGE ================= -->
+    <div id="navbar"></div>
+
+    <main class="hub-container content-wrapper">
+      
+      <!-- ================= PREMIUM HEADER PROFILE BANNER ================= -->
+      <section class="instructor-banner-card reveal active">
+        <div class="banner-flex-layout">
+          <div class="profile-avatar-wrapper">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80" alt="Sarah Jenkins" />
+          </div>
+          
+          <div class="profile-details-content">
+            <div class="profile-meta-top">
+              <div>
+                <h2>Sarah Jenkins</h2>
+                <p class="instructor-title">Lead Talent Acquisition Architect & Ex-Google Staff Engineer</p>
+              </div>
+              <button class="price-btn solid enroll-top-btn">Enroll Now</button>
+            </div>
+            
+            <p class="profile-bio">
+              Helping aspiring developers scale their systems engineering knowledge and navigate strategic salary negotiations. 
+              Author of career blueprints accelerating placements across elite global product ecosystems.
+            </p>
+            
+            <div class="profile-stats-bar">
+              <span><i class="fa-solid fa-star text-primary"></i> 4.9 Instructor Rating</span>
+              <span><i class="fa-solid fa-graduation-cap"></i> 15,912 Students</span>
+              <span><i class="fa-solid fa-book-open"></i> 34 Resources</span>
+              
+              <div class="profile-socials">
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= DYNAMIC NAVIGATION TABS ================= -->
+      <section class="hub-navigation-tabs reveal">
+        <div class="tabs-scroll-container">
+          <button class="hub-tab-btn active" data-target="about">About</button>
+          <button class="hub-tab-btn" data-target="courses">Courses</button>
+          <button class="hub-tab-btn" data-target="notes">Notes</button>
+          <button class="hub-tab-btn" data-target="projects">Projects</button>
+          <button class="hub-tab-btn" data-target="podcasts">Podcasts</button>
+          <button class="hub-tab-btn" data-target="books">Books</button>
+          <button class="hub-tab-btn" data-target="reviews">Reviews</button>
+        </div>
+      </section>
+
+      <!-- ================= DYNAMIC DOCK SYSTEM DISPLAY PANEL ================= -->
+      <section class="hub-dynamic-content reveal">
+        <h3 id="sectionDisplayTitle" class="hub-content-title">About the Instructor</h3>
+        
+        <div id="hubDynamicGrid" class="hub-dynamic-grid-system">
+          <!-- Material Content is rendered dynamically via JavaScript based on chosen tabs -->
+        </div>
+
+        <!-- PAGINATION SYSTEM CONTAINER -->
+        <div id="hubPagination" class="hub-pagination-wrap">
+          <!-- Populated during multi-item layouts like Books or Courses -->
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ================= FOOTER LINKAGE ================= -->
+    <div id="footer"></div>
+
+    <script src="./Script/about_page.js"></script>
+    <script src="./Script/Include.js"></script>
+
+  </body>
+</html>

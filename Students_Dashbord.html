@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard - TalentGrow</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="../style/Dashbord/students.css" />
+  </head>
+  <body>
+
+    <div id="navbar"></div>
+    <div class="student-container">
+      <!-- ================= SIDEBAR NAVIGATION ================= -->
+      <aside class="sidebar" id="studentSidebar">
+        <div class="sidebar-brand">
+          <h2> TG Student</h2>
+          <button class="sidebar-close-btn" id="sidebarCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <nav class="sidebar-menu">
+          <a href="#" class="menu-item active" data-tab="overview"><i class="fa-solid fa-graduation-cap"></i> My Classroom</a>
+          <a href="#" class="menu-item" data-tab="assignments"><i class="fa-solid fa-tasks"></i> Assignments</a>
+          <a href="#" class="menu-item" data-tab="doubts"><i class="fa-solid fa-comment-medical"></i> Ask Doubt</a>
+        </nav>
+        <div class="sidebar-footer">
+          <div class="student-profile-summary">
+            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=100&q=80" alt="Student Avatar" />
+            <div>
+              <h4>Anuj Varma</h4>
+              <p>ID: #TG-2026-89</p>
+            </div>
+          </div>
+          <a href="#" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+        </div>
+      </aside>
+
+      <!-- ================= MAIN DASHBOARD CONTENT ================= -->
+      <main class="main-content">
+        <!-- TOP ROW BAR -->
+        <header class="top-header">
+          <div class="header-left-box">
+            <button class="hamburger-btn" id="mobileToggleBtn"><i class="fa-solid fa-bars"></i></button>
+            <div class="welcome-text">
+              <h1>Happy Learning, Anuj!</h1>
+              <p>Track your assignments, jump into live lectures, and build projects.</p>
+            </div>
+          </div>
+        </header>
+
+        <!-- ================= STUDENT PROGRESS CARDS ================= -->
+        <section class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon primary"><i class="fa-solid fa-book-open-reader"></i></div>
+            <div class="stat-info">
+              <h3>Enrolled Courses</h3>
+              <p>2 Active</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon purple"><i class="fa-solid fa-star"></i></div>
+            <div class="stat-info">
+              <h3>Attendance Rate</h3>
+              <p>94.2%</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon green"><i class="fa-solid fa-circle-check"></i></div>
+            <div class="stat-info">
+              <h3>Tasks Completed</h3>
+              <p>12 / 15</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= DYNAMIC WORKSPACE SECTIONS ================= -->
+        
+        <!-- SECTION 1: MY CLASSROOM (OVERVIEW) -->
+        <div id="overviewSection" class="dashboard-section-wrapper">
+          <!-- LIVE MEETING BANNER -->
+          <div class="live-banner">
+            <div class="live-left">
+              <span class="live-pulse-dot"></span>
+              <div>
+                <h3>Live Lecture is Running</h3>
+                <p>Topic: Advanced Middleware & Routing Architecture in Python</p>
+              </div>
+            </div>
+            <a href="https://meet.google.com" target="_blank" class="price-btn solid-white"><i class="fa-solid fa-video"></i> Join Meet Now</a>
+          </div>
+
+          <div class="dashboard-section" style="margin-top: 30px;">
+            <div class="section-header">
+              <h3>Your Enrolled Programs & Progress</h3>
+            </div>
+            <div class="courses-progress-grid">
+              <!-- Card 1 -->
+              <div class="progress-course-card">
+                <div class="card-top">
+                  <div class="course-icon-box"><i class="fa-brands fa-python"></i></div>
+                  <span class="batch-tag">Cohort 9</span>
+                </div>
+                <h4>Python Web Development Masterclass</h4>
+                <div class="progress-bar-container">
+                  <div class="progress-fill" style="width: 80%;"></div>
+                </div>
+                <div class="card-bottom-info">
+                  <span>80% Complete</span>
+                  <span>24/30 Lessons</span>
+                </div>
+              </div>
+              <!-- Card 2 -->
+              <div class="progress-course-card">
+                <div class="card-top">
+                  <div class="course-icon-box"><i class="fa-brand fa-css3-alt"></i></div>
+                  <span class="batch-tag">Cohort 3</span>
+                </div>
+                <h4>UI/UX Styling with Tailwind CSS</h4>
+                <div class="progress-bar-container">
+                  <div class="progress-fill" style="width: 45%;"></div>
+                </div>
+                <div class="card-bottom-info">
+                  <span>45% Complete</span>
+                  <span>9/20 Lessons</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2: ASSIGNMENTS LAB -->
+        <section class="dashboard-section" id="assignmentsSection" style="display: none;">
+          <div class="section-header">
+            <div>
+              <h3>Your Curated Course Assignments</h3>
+              <p class="section-subtitle">Submit your GitHub links and track your trainer feedback status</p>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>Assignment Topic</th>
+                  <th>Deadline</th>
+                  <th>Status</th>
+                  <th>Grade/Feedback</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Django REST API Authentication</strong></td>
+                  <td>June 05, 2026</td>
+                  <td><span class="status-chip pending">Pending Submit</span></td>
+                  <td>--</td>
+                </tr>
+                <tr>
+                  <td><strong>Tailwind Custom Complex Responsive Landing Page</strong></td>
+                  <td>May 28, 2026</td>
+                  <td><span class="status-chip paid">Approved</span></td>
+                  <td><strong style="color: #10b981;">A+ Excellent Code Structure</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- SECTION 3: ASK A DOUBT PORTAL -->
+        <section class="dashboard-section" id="doubtsSection" style="display: none;">
+          <div class="section-header">
+            <div>
+              <h3>Instant Mentor Doubt Resolution</h3>
+              <p class="section-subtitle">Stuck somewhere? Raise a ticket and your batch trainer will respond directly with code reviews.</p>
+            </div>
+          </div>
+          
+          <div class="doubt-portal-grid">
+            <form id="raiseDoubtForm" class="doubt-form-box">
+              <div class="form-group">
+                <label>Doubt Core Subject / Topic</label>
+                <input type="text" id="doubtTopic" required placeholder="e.g., Docker bridge connection error" />
+              </div>
+              <div class="form-group">
+                <label>Elaborate your issue or paste Error Snippet</label>
+                <textarea id="doubtSnippet" rows="5" required placeholder="Paste console logs or problematic code syntax here..."></textarea>
+              </div>
+              <button type="submit" class="price-btn solid"><i class="fa-solid fa-paper-plane"></i> Submit Ticket to Mentor</button>
+            </form>
+
+            <div class="my-tickets-box">
+              <h4>Your Active Doubt Logs</h4>
+              <div id="studentTicketsContainer" class="tickets-timeline">
+                <!-- Dynamically populated via JS -->
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="../Script/Dashbord/students.js"></script>
+    <script src="../Script/Include.js"></script>
+  </body>
+</html>

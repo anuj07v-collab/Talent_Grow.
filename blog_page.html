@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TalentGrow Insights - Accelerate Your Career</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <!-- FontAwesome for Premium Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="./style/blog_page.css" />
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR LINKAGE ================= -->
+  <div id="navbar"></div>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="hero-section reveal active">
+    <div class="hero-container">
+      <div class="hero-left">
+        <span class="tag-badge"><i class="fa-solid fa-bolt"></i> #1 Growth & Placement Platform</span>
+        <h1 class="block-title">Unleash Your Potential with <span>TalentGrow Insights</span></h1>
+        <p class="hero-desc">
+          Discover corporate tech secrets, placement strategies, expert coding roadmaps, and
+          industry-vetted career guidance. Elevate your talent, accelerate your professional growth.
+        </p>
+
+        <div class="hero-search-box">
+          <input type="text" id="searchInput" placeholder="Search topics, skills, or interview tips..." />
+          <button class="btn-cta">Search</button>
+        </div>
+
+        <div class="hero-stats-row">
+          <div>
+            <h3 class="counter" data-target="50000">0</h3>
+            <p>Active Learners</p>
+          </div>
+
+          <div>
+            <h3 class="counter" data-target="120">0</h3>
+            <p>Hiring Partners</p>
+          </div>
+
+          <div>
+            <h3 class="counter rating" data-target="4.9">0</h3>
+            <p>User Rating</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-img-box">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80"
+            alt="TalentGrow Community Group" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CATEGORY FILTERS ================= -->
+  <section class="filters-section content-wrapper reveal">
+    <div class="filter-buttons-wrap">
+      <button class="filter-pill active" data-filter="all">All Stories</button>
+      <button class="filter-pill" data-filter="placement">Placement Tips</button>
+      <button class="filter-pill" data-filter="tech">Tech & Coding</button>
+      <button class="filter-pill" data-filter="career">Career Growth</button>
+      <button class="filter-pill" data-filter="hr">HR Insights</button>
+    </div>
+  </section>
+
+  <!-- ================= FEATURED ARTICLE ================= -->
+  <section class="featured-section content-wrapper reveal">
+    <div class="featured-card-wrap">
+      <div class="featured-img-box">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=80"
+          alt="AI Recruitment Roadmap" />
+      </div>
+
+      <div class="featured-text-content">
+        <span class="sub-badge"><span class="dot-indicator"></span>Editor's Pick</span>
+        <h2>The Ultimate Guide to Crack <span>MAANG Interviews in 2026</span></h2>
+        <p>
+          An extensive breakdown of Data Structures, System Design expectations, and behavioral rounds
+          vetted by software engineers currently working at Google and Meta. Learn the exact pattern to stand out.
+        </p>
+        <button class="price-btn solid" style="max-width: 220px;">Read Masterclass <i
+            class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BLOG ENGINE & SIDEBAR LAYER ================= -->
+  <section class="main-blog-layout content-wrapper reveal">
+
+    <!-- LEFT: 6 PERFECT CARDS -->
+    <div class="blog-grid-system">
+
+      <!-- CARD 1: TECH -->
+      <div class="custom-blog-card" data-category="tech">
+        <div class="card-img-mask">
+          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80"
+            alt="Full Stack Javascript" />
+        </div>
+        <div class="card-body-info">
+          <span class="category-indicator">Tech & Coding</span>
+          <h3>Next.js 16 vs React: What to Learn First?</h3>
+          <p>A comprehensive comparative analysis of server components and routing for modern web architectures.</p>
+          <div class="card-footer-action">
+            <button class="price-btn outline">Read More</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2: PLACEMENT -->
+      <div class="custom-blog-card" data-category="placement">
+        <div class="card-img-mask">
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80"
+            alt="ATS Resume" />
+        </div>
+        <div class="card-body-info">
+          <span class="category-indicator">Placement Tips</span>
+          <h3>How to Build an ATS-Friendly Resume</h3>
+          <p>Stop getting filtered out by automated recruiting systems. Use these exact structural templates to score
+            95+.</p>
+          <div class="card-footer-action">
+            <button class="price-btn outline">Read More</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3: CAREER -->
+      <div class="custom-blog-card" data-category="career">
+        <div class="card-img-mask">
+          <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=600&q=80"
+            alt="UI UX Design" />
+        </div>
+        <div class="card-body-info">
+          <span class="category-indicator">Career Growth</span>
+          <h3>High-Income Skills to Learn This Year</h3>
+          <p>From AI prompt engineering to cloud architecture—discover the target skills commanding the largest
+            packages.</p>
+          <div class="card-footer-action">
+            <button class="price-btn outline">Read More</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 4: HR -->
+      <div class="custom-blog-card" data-category="hr">
+        <div class="card-img-mask">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80"
+            alt="HR Interview" />
+        </div>
+        <div class="card-body-info">
+          <span class="category-indicator">HR Insights</span>
+          <h3>Decoding HR Negotiating Tactics</h3>
+          <p>Learn how to smartly handle counter-offers and evaluate base salaries versus corporate stocks confidently.
+          </p>
+          <div class="card-footer-action">
+            <button class="price-btn outline">Read More</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 5: TECH -->
+      <div class="custom-blog-card" data-category="tech">
+        <div class="card-img-mask">
+          <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=600&q=80"
+            alt="Python AI" />
+        </div>
+        <div class="card-body-info">
+          <span class="category-indicator">Tech & Coding</span>
+          <h3>Python Roadmap for Data Science</h3>
+          <p>Skip the fluff. Focus on NumPy, Pandas, and Scikit-Learn to build production-ready ML modules rapidly.</p>
+          <div class="card-footer-action">
+            <button class="price-btn outline">Read More</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 6: PLACEMENT -->
+      <div class="custom-blog-card" data-category="placement">
+        <div class="card-img-mask">
+          <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80"
+            alt="Mock Interviews" />
+        </div>
+        <div class="card-body-info">
+          <span class="category-indicator">Placement Tips</span>
+          <h3>Overcoming Interview Performance Anxiety</h3>
+          <p>Practical frameworks and cognitive tricks to articulate technical answers calmly under high pressure.</p>
+          <div class="card-footer-action">
+            <button class="price-btn outline">Read More</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT: MODERN SIDEBAR -->
+    <aside class="sidebar-wrapper">
+      <div class="sidebar-card">
+        <h3>Trending Guides</h3>
+        <div class="sidebar-links-stack">
+          <a href="#"><i class="fa-solid fa-trending-up"></i> Top Off-Campus Opportunities 2026</a>
+          <a href="#"><i class="fa-solid fa-trending-up"></i> System Design Cheatsheet for Freshers</a>
+          <a href="#"><i class="fa-solid fa-trending-up"></i> How to Optimize LinkedIn for Inbound HRs</a>
+          <a href="#"><i class="fa-solid fa-trending-up"></i> Freelancing Guide: Getting Remote Clients</a>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>Talent Cloud Tags</h3>
+        <div class="tag-cloud">
+          <span class="cloud-tag">DSA</span>
+          <span class="cloud-tag">React</span>
+          <span class="cloud-tag">Negotiation</span>
+          <span class="cloud-tag">Resume</span>
+          <span class="cloud-tag">AI Tools</span>
+          <span class="cloud-tag">DevOps</span>
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <!-- ================= LOAD MORE SYSTEM ================= -->
+  <section class="load-more-section reveal">
+    <button id="loadMoreBtn" class="price-btn outline" style="max-width: 260px; margin: 0 auto; ">Load More
+      Articles</button>
+  </section>
+
+  <!-- ================= NEWSLETTER ROW ================= -->
+  <section class="newsletter-banner content-wrapper-narrow reveal">
+    <div class="dark-banner-cta">
+      <h3>Join 20,000+ Smart Professionals</h3>
+      <p>Get curated lists of active job openings, interview transcripts, and engineering resource sheets weekly.</p>
+      <form id="newsletterForm" class="inline-form">
+        <input type="email" placeholder="Enter your best email address..." required />
+        <button type="submit" class="banner-btn">Get Updates</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ================= CTA COACHING HUB ================= -->
+  <section class="cta-premium-section content-wrapper reveal">
+    <div class="app-download-banner">
+      <div>
+        <h3 style="margin-bottom: 5px; font-weight: 700; color: var(--dark-blue);">Ready to Level Up Your Career?</h3>
+        <p style="color: var(--text-gray); font-size: 0.95rem;">Join TalentGrow Premium Cohorts and secure your dream
+          offer.</p>
+      </div>
+      <div class="app-buttons-group">
+        <button class="banner-btn"><i class="fa-solid fa-rocket"></i> Launch Placement Program</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER LINKAGE ================= -->
+  <div id="footer"></div>
+
+  <script src="./Script/blog_page.js"></script>
+  <script src="./Script/Include.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talent Grow - Advanced LMS & Payment Console</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style/payment.css">
+</head>
+<body>
+    <div id="navbar"></div>
+
+
+    <section class="content-wrapper checkout-section-layout">
+        <div class="checkout-card-form">
+            <h2>Checkout</h2>
+            <label class="input-main-label">Cart Type</label>
+            <div class="cart-type-row">
+                <div class="provider-tab active" data-provider="paypal">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal">
+                </div>
+                <div class="provider-tab" data-provider="amex">
+                    <img src="data:image/png;base64,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" alt="Amex">
+                </div>
+                <div class="provider-tab" data-provider="visa">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Visa_Inc._logo_%282005%E2%80%932014%29.png" alt="Visa">
+                </div>
+                <div class="provider-tab" data-provider="mastercard">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/UPI-Logo-vector.svg/120px-UPI-Logo-vector.svg.png?_=20200901100648" alt="Mastercard">
+                </div>
+            </div>
+
+            <form id="lms-payment-form" novalidate>
+                <div class="form-group">
+                    <label for="card-name">Name on Card</label>
+                    <input type="text" id="card-name" placeholder="Enter name on Card" required>
+                    <span class="error-msg">Name field cannot be left blank</span>
+                </div>
+                <div class="form-group">
+                    <label for="card-number">Card Number</label>
+                    <input type="text" id="card-number" placeholder="Enter Card Number" maxlength="19" required>
+                    <span class="error-msg">Enter a valid 16-digit card number</span>
+                </div>
+                <div class="form-row-split">
+                    <div class="form-group">
+                        <label for="card-expiry">Expiration Date ( MM/YY )</label>
+                        <input type="text" id="card-expiry" placeholder="Enter Expiration Date" maxlength="5" required>
+                        <span class="error-msg">Invalid Date</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="card-cvc">CVC</label>
+                        <input type="password" id="card-cvc" placeholder="Enter CVC" maxlength="3" required>
+                        <span class="error-msg">3 digits req.</span>
+                    </div>
+                </div>
+                <div class="checkbox-row">
+                    <input type="checkbox" id="save-info" checked>
+                    <label for="save-info">Save my information for faster checkout</label>
+                </div>
+                <button type="submit" class="btn-confirm-payment" id="submit-pay-btn">Confirm Payment</button>
+            </form>
+        </div>
+
+        <div class="summary-sidebar-box">
+            <h3>Summary</h3>
+            <div class="summary-items-list">
+                <div class="summary-item-card">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=150&q=80" alt="Course thumb">
+                    <div class="item-meta-info">
+                        <h4>adipiscing elit, sed do eiusmod tempor</h4>
+                        <p>Lorem ipsum dolor...</p>
+                        <span class="item-price" data-value="24.69">$24.69</span>
+                    </div>
+                </div>
+                <div class="summary-item-card">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=150&q=80" alt="Course thumb">
+                    <div class="item-meta-info">
+                        <h4>sed do eiusmod tempor adipiscing elit</h4>
+                        <p>Lorem ipsum dolor...</p>
+                        <span class="item-price" data-value="24.69">$24.69</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calc-table-summary">
+                <div class="calc-row"><span>Subtotal</span><span id="subtotal-val">$0.00</span></div>
+                <div class="calc-row"><span>Coupon Discount</span><span id="discount-val">0 %</span></div>
+                <div class="calc-row"><span>TAX</span><span id="tax-val">5</span></div>
+                <div class="calc-row total-row"><span>Total</span><span id="total-val">$0.00</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-wrapper row-space">
+        <div class="block-header">
+            <h2 class="block-title">Top Education offers and deals are listed here</h2>
+            <a href="#" class="see-all-link">See all</a>
+        </div>
+        <div class="deals-grid">
+            <div class="deal-card">
+                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" alt="Deal 1">
+                <div class="deal-overlay">
+                    <span class="discount-badge">50%</span>
+                    <h4>Lorem ipsum dolor</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                </div>
+            </div>
+            <div class="deal-card">
+                <img src="https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=600&q=80" alt="Deal 2">
+                <div class="deal-overlay">
+                    <span class="discount-badge cyan-bg-badge">10%</span>
+                    <h4>Lorem ipsum dolor</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                </div>
+            </div>
+            <div class="deal-card">
+                <img src="https://images.unsplash.com/photo-1581291518655-9523c932dedf?auto=format&fit=crop&w=600&q=80" alt="Deal 3">
+                <div class="deal-overlay">
+                    <span class="discount-badge">50%</span>
+                    <h4>Lorem ipsum dolor</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <script src="./Script/payment.js"></script>
+    <script src="./Script/Include.js"></script>
+</body>
+</html>

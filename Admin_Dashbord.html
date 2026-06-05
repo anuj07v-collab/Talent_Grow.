@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - TalentGrow</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="../style/Dashbord/admin.css" />
+</head>
+
+<body>
+    <div id="navbar" data-include="./Components/Navbar_B.html"></div>
+    <div class="dashboard-container">
+
+        <aside class="sidebar" id="dashboardSidebar">
+            <div class="sidebar-brand">
+                <h2> Admin Dashbord</h2>
+                <button class="sidebar-close-btn" id="sidebarCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <nav class="sidebar-menu">
+                <a href="#" class="menu-item active" data-tab="overview"><i class="fa-solid fa-chart-pie"></i>
+                    Overview</a>
+                <a href="#" class="menu-item" data-tab="students"><i class="fa-solid fa-user-graduate"></i> Manage
+                    Students</a>
+                <a href="#" class="menu-item" data-tab="courses"><i class="fa-solid fa-book"></i> Manage Courses</a>
+                <a href="#" class="menu-item" data-tab="settings"><i class="fa-solid fa-gear"></i> Settings</a>
+            </nav>
+            <div class="sidebar-footer">
+                <p><span class="dot-online"></span> Logged in as Admin</p>
+                <a href="#" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+
+            <header class="top-header">
+                <div class="header-left-toggle">
+                    <button class="hamburger-menu-btn" id="mobileToggleBtn"><i class="fa-solid fa-bars"></i></button>
+                    <div class="header-search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="dashboardSearch"
+                            placeholder="Search students, courses, or payment status..." />
+                    </div>
+                </div>
+
+                <div class="header-profile">
+                    <div class="notification-badge">
+                        <i class="fa-solid fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80"
+                        alt="Admin Avatar" class="avatar" />
+                </div>
+            </header>
+
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon purple"><i class="fa-solid fa-users"></i></div>
+                    <div class="stat-info">
+                        <h3>Total Students</h3>
+                        <p id="totalStudentsCount">0</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon primary"><i class="fa-solid fa-layer-group"></i></div>
+                    <div class="stat-info">
+                        <h3>Active Cohorts</h3>
+                        <p id="activeCoursesCount">0</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon green"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+                    <div class="stat-info">
+                        <h3>Total Revenue</h3>
+                        <p id="totalRevenueCount">₹0</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="dashboard-section" id="studentsSection">
+                <div class="section-header">
+                    <div>
+                        <h3>Student Enrollment Registry</h3>
+                        <p class="section-subtitle">Manage, search, and verify active platform applications</p>
+                    </div>
+                    <button class="price-btn solid" id="addStudentBtn"><i class="fa-solid fa-plus"></i> Add New
+                        Student</button>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th>Student Name</th>
+                                <th>Applied Course</th>
+                                <th>Date Joined</th>
+                                <th>Payment Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="studentTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="dashboard-section" id="coursesSection">
+                <div class="section-header">
+                    <div>
+                        <h3>Course Catalog Control</h3>
+                        <p class="section-subtitle">Track course pricing, active sizes, and architectural modules</p>
+                    </div>
+                    <button class="price-btn solid" id="addCourseBtn"><i class="fa-solid fa-plus"></i> Launch New
+                        Course</button>
+                </div>
+                <div class="courses-admin-grid" id="courseAdminGrid">
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <div class="modal-overlay" id="studentModal">
+        <div class="custom-modal">
+            <div class="modal-header">
+                <h3>Add New Student Entry</h3>
+                <button class="modal-close-x" id="modalCloseX"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <form id="studentForm">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="modalStudentName" required placeholder="e.g. Aman Sharma" />
+                </div>
+                <div class="form-group">
+                    <label>Target Course</label>
+                    <select id="modalStudentCourse">
+                        <option value="Python Web Development">Python Web Development</option>
+                        <option value="System Design Masterclass">System Design Masterclass</option>
+                        <option value="UI/UX Styling with Tailwind">UI/UX Styling with Tailwind</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Payment Status</label>
+                    <select id="modalStudentStatus">
+                        <option value="Paid">Paid</option>
+                        <option value="Pending">Pending</option>
+                    </select>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="price-btn outline" id="closeModalBtn">Cancel</button>
+                    <button type="submit" class="price-btn solid">Save Student</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="footer" data-include="./Components/footer.html"></div>
+
+    <script src="../Script/Dashbord/admin.js"></script>
+    <script src="../Script/Include.js"></script>
+</body>
+
+</html>

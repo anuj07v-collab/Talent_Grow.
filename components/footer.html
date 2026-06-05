@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer</title>
+
+
+  <link rel="stylesheet" href="/style/fotter.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    integrity="sha512-XcIsjKMcuVe0Ucj/xgIXQnytNwBttJbNjltBV18IOnru2lDPe9KRRyvCXw6Y5H415vbBLRm8+q6fmLUU7DfO6Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+  <footer class="tg-footer">
+    <div class="tg-footer-contact-bar">
+      <div class="contact-item">
+        <i class="fas fa-envelope-open-text"></i>
+        <span>Email: admissions@talentgrow.com</span>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-phone-volume"></i>
+        <span>Support: +91 98765 43210</span>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-certificate"></i>
+        <span>ISO 9001:2015 Certified Institute</span>
+      </div>
+    </div>
+
+    <div class="tg-newsletter-section">
+      <div class="newsletter-container">
+        <h2>Subscribe to get our Newsletter</h2>
+        <form class="tg-big-sub-form">
+          <div class="input-wrapper">
+            <input type="email" placeholder="Your Email Address" required>
+            <button type="submit">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="tg-footer-main">
+      <div class="tg-footer-col wide-col">
+        <div class="tg-logo">
+          <img src="/img/logo_2.png" alt="Talent Grow">
+        </div>
+        <p>Master the future of tech with our hands-on training programs. Join 5000+ students already learning with
+          us.</p>
+      </div>
+
+      <div class="tg-footer-col">
+        <h4>Learning Paths</h4>
+        <ul>
+          <li><a href="#">Frontend Development</a></li>
+          <li><a href="#">Backend Mastery</a></li>
+          <li><a href="#">Mobile App Dev</a></li>
+          <li><a href="#">UI/UX Design</a></li>
+          <li><a href="#">Data Science & AI</a></li>
+        </ul>
+      </div>
+
+      <div class="tg-footer-col">
+        <h4>For Students</h4>
+        <ul>
+          <li><a href="#">Free Demo Classes</a></li>
+          <li><a href="#">Placement Cell</a></li>
+          <li><a href="#">Alumni Success</a></li>
+          <li><a href="#">Verify Certificate</a></li>
+        </ul>
+      </div>
+
+      <div class="tg-footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Journey</a></li>
+          <li><a href="#">Work With Us <span class="badge">Hiring</span></a></li>
+          <li><a href="#">Privacy & Refund</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="tg-footer-col">
+        <h4>Headquarters</h4>
+        <p class="address"><i class="fas fa-map-marker-alt"></i> Plot No. 45, Tech Zone, Vijay Nagar, Indore - 452010
+        </p>
+        <div class="tg-social-links">
+          <a href="#" class="social-icon"><i class="ri-facebook-fill"></i></a>
+          <a href="#" class="social-icon"><i class="ri-twitter-fill"></i></a>
+          <a href="#" class="social-icon"><i class="ri-linkedin-fill"></i></a>
+          <a href="#" class="social-icon"><i class="ri-instagram-fill"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="tg-footer-bottom">
+      <div class="bottom-container">
+        <div class="copy-text">
+          <p>Copyright © 2026 <strong>Talent Grow</strong> IT Training & Management System. Registered under Govt. of
+            India. </p>
+        </div>
+        <div class="trust-icons">
+          <span>Trusted By: </span>
+          <i class="ri-google-fill"></i></i>
+          <i class="ri-meta-fill"></i></i>
+          <i class="ri-microsoft-fill"></i></i>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // 1. Dynamic Copyright Year Auto-Updater
+      const updateCopyrightYear = () => {
+        const footerParagraph = document.querySelector(".copy-text p");
+        if (footerParagraph) {
+          const currentYear = new Date().getFullYear(); // Automatically fetches 2026
+
+          footerParagraph.innerHTML = `Copyright © ${currentYear} <strong>Talent Grow</strong> IT Training & Management System. Registered under Govt. of India.`;
+        }
+      };
+
+      // 2. Premium Newsletter Form Handler with Custom Success State
+      const handleNewsletter = () => {
+        const newsletterForm = document.querySelector(".tg-big-sub-form");
+        const emailInput = document.querySelector(".input-wrapper input[type='email']");
+        const subscribeBtn = document.querySelector(".input-wrapper button");
+        const container = document.querySelector(".newsletter-container");
+
+        if (newsletterForm && emailInput && subscribeBtn && container) {
+          newsletterForm.addEventListener("submit", (e) => {
+            e.preventDefault(); // Prevents standard page reload
+
+            const emailValue = emailInput.value.trim();
+            if (emailValue === "") return;
+
+            // Visual Feedback: Disable button and show loading state
+            subscribeBtn.innerText = "Subscribing...";
+            subscribeBtn.disabled = true;
+            subscribeBtn.style.opacity = "0.7";
+            subscribeBtn.style.cursor = "not-allowed";
+
+            // Simulating secure server API processing delay
+            setTimeout(() => {
+              // Smooth fade-out transition
+              container.style.transition = "all 0.4s ease";
+              container.style.opacity = "0";
+              container.style.transform = "translateY(-10px)";
+
+              setTimeout(() => {
+                // Injecting a clean, conversion-friendly success component
+                container.innerHTML = `
+                            <div style="animation: fadeIn 0.6s ease forwards;">
+                                <h2 style="color: #49bbbd; font-size: 26px; margin-bottom: 8px; font-weight: 600;">
+                                    <i class="ri-checkbox-circle-fill" style="vertical-align: middle; margin-right: 8px;"></i> Awesome! You're Subscribed.
+                                </h2>
+                                <p style="color: #adb5bd; font-size: 14px; max-width: 500px; margin: 0 auto; line-height: 1.6;">
+                                    We have successfully registered <strong style="color:#fff;">${emailValue}</strong>. Get ready for exclusive IT training resources, updates, and upcoming batch announcements.
+                                </p>
+                            </div>
+                        `;
+                container.style.opacity = "1";
+                container.style.transform = "translateY(0)";
+              }, 400);
+            }, 1200);
+          });
+        }
+      };
+
+      // 3. Social Media & Trust Asset Click Logger
+      const initAnalyticsTracking = () => {
+        const socialLinks = document.querySelectorAll(".tg-social-links .social-icon");
+        socialLinks.forEach(link => {
+          link.addEventListener("click", function () {
+            const iconClass = this.querySelector("i").className;
+            console.log(`Analytics: User redirection initiated via social node -> ${iconClass}`);
+          });
+        });
+
+        const trustIcons = document.querySelectorAll(".trust-icons i");
+        trustIcons.forEach(icon => {
+          icon.addEventListener("click", function () {
+            const partnerName = this.getAttribute("title");
+            console.log(`Analytics: Trust partner badge verified -> ${partnerName}`);
+          });
+        });
+      };
+
+      // Initialize all modular scripts
+      updateCopyrightYear();
+      handleNewsletter();
+      initAnalyticsTracking();
+    });
+
+  </script>
+
+</body>
+
+</html>

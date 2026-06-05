@@ -1,0 +1,383 @@
+/* ==========================================================================
+   TALENTGROW STUDENT BRAND ARCHITECTURE SETUP
+   ========================================================================== */
+:root {
+    --primary: #49bcbc;
+    --primary-hover: #3ca5a5;
+    --dark-blue: #0d1425;
+    --sidebar-bg: #111c35;
+    --text-gray: #64748b;
+    --white: #ffffff;
+    --bg-light: #f8fafc;
+    --border-gray: #e2e8f0;
+    
+    --green-success: #10b981;
+    --orange-alert: #f59e0b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--dark-blue);
+    overflow-x: hidden;
+}
+
+/* MAIN LAYOUT ENGINE */
+.student-container {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    min-height: 100vh;
+}
+
+/* ==========================================================================
+   SIDEBAR STYLING
+   ========================================================================== */
+.sidebar {
+    background-color: var(--sidebar-bg);
+    color: var(--white);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 100;
+}
+
+.sidebar-brand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar-brand h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar-close-btn {
+    background: transparent;
+    border: none;
+    color: var(--white);
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: none;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 40px;
+    flex-grow: 1;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #94a3b8;
+    text-decoration: none;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.menu-item:hover, .menu-item.active {
+    background: rgba(73, 188, 188, 0.15);
+    color: var(--primary);
+}
+
+.sidebar-footer {
+    border-top: 1px solid #1e293b;
+    padding-top: 20px;
+}
+
+.student-profile-summary {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+    color: var(--white);
+}
+
+.student-profile-summary img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary);
+}
+
+.student-profile-summary h4 { font-size: 0.9rem; font-weight: 600; }
+.student-profile-summary p { font-size: 0.75rem; color: #94a3b8; }
+
+.logout-btn {
+    color: #ef4444;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ==========================================================================
+   CONTENT DESK & CORE MODULES
+   ========================================================================== */
+.main-content {
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.header-left-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.hamburger-btn {
+    background: var(--white);
+    border: 1px solid var(--border-gray);
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: none;
+}
+
+.welcome-text h1 { font-size: 1.6rem; font-weight: 800; }
+.welcome-text p { font-size: 0.9rem; color: var(--text-gray); }
+
+/* GRID SCORECARDS */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.stat-card {
+    background: var(--white);
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid var(--border-gray);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.stat-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+}
+
+.stat-icon.primary { background: #ecfdf5; color: var(--primary); }
+.stat-icon.purple { background: #faf5ff; color: #a855f7; }
+.stat-icon.green { background: #f0fdf4; color: var(--green-success); }
+
+.stat-info h3 { font-size: 0.85rem; color: var(--text-gray); font-weight: 500; }
+.stat-info p { font-size: 1.35rem; font-weight: 700; }
+
+/* LIVE BANNER BLOCK */
+.live-banner {
+    background: linear-gradient(135deg, #49bcbc 0%, #2e8b8b 100%);
+    padding: 25px 30px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--white);
+    box-shadow: 0 10px 25px rgba(73, 188, 188, 0.25);
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.live-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.live-pulse-dot {
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(255, 255, 255, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+}
+
+.live-left h3 { font-size: 1.2rem; font-weight: 700; }
+.live-left p { font-size: 0.9rem; opacity: 0.9; }
+
+/* ==========================================================================
+   CLASSROOM: PROGRESS CARDS
+   ========================================================================== */
+.dashboard-section {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid var(--border-gray);
+    box-shadow: 0 10px 30px rgba(13, 20, 37, 0.01);
+}
+
+.section-header h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 5px; }
+.section-subtitle { font-size: 0.85rem; color: var(--text-gray); }
+
+.courses-progress-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.progress-course-card {
+    border: 1px solid var(--border-gray);
+    padding: 24px;
+    border-radius: 14px;
+    background: #f8fafc;
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.course-icon-box {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    background: rgba(73, 188, 188, 0.1);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+}
+
+.batch-tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-gray);
+    background: var(--white);
+    padding: 4px 10px;
+    border-radius: 20px;
+    border: 1px solid var(--border-gray);
+}
+
+.progress-course-card h4 { font-size: 1rem; font-weight: 700; margin-bottom: 15px; }
+
+.progress-bar-container {
+    width: 100%;
+    height: 8px;
+    background: var(--border-gray);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--primary);
+    border-radius: 10px;
+}
+
+.card-bottom-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--text-gray);
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   DOUBT HUB COMPONENT LAYOUT
+   ========================================================================== */
+.doubt-portal-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.doubt-form-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group { margin-bottom: 18px; }
+.form-group label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; color: var(--text-gray); }
+.form-group input, .form-group textarea { width: 100%; padding: 12px 16px; border: 1px solid var(--border-gray); border-radius: 8px; outline: none; font-size: 0.9rem; }
+.form-group textarea { resize: none; font-family: monospace; }
+
+.my-tickets-box h4 { font-size: 1rem; font-weight: 700; margin-bottom: 15px; }
+.tickets-timeline { display: flex; flex-direction: column; gap: 12px; }
+
+.ticket-status-node {
+    border: 1px solid var(--border-gray);
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 10px;
+}
+.ticket-status-node h5 { font-size: 0.9rem; font-weight: 700; display: flex; justify-content: space-between; }
+.ticket-status-node p { font-size: 0.8rem; color: var(--text-gray); margin-top: 4px; }
+
+/* DATA TABLES GENERALS */
+.table-responsive { overflow-x: auto; margin-top: 20px; }
+.custom-table { width: 100%; border-collapse: collapse; text-align: left; }
+.custom-table th { padding: 14px 18px; background: #f8fafc; color: var(--text-gray); font-size: 0.85rem; font-weight: 600; border-bottom: 1px solid var(--border-gray); }
+.custom-table td { padding: 16px 18px; border-bottom: 1px solid var(--border-gray); font-size: 0.9rem; }
+
+.status-chip { padding: 4px 12px; border-radius: 20px; font-size: 0.78rem; font-weight: 600; display: inline-block; }
+.status-chip.paid { background: #dcfce7; color: var(--green-success); }
+.status-chip.pending { background: #fee2e2; color: #ef4444; }
+
+/* UNIVERSAL BUTTONS CONFIG */
+.price-btn { padding: 10px 20px; border-radius: 8px; font-weight: 600; font-size: 0.85rem; cursor: pointer; border: none; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s ease; }
+.price-btn.solid { background: var(--primary); color: var(--white); }
+.price-btn.solid:hover { background: var(--primary-hover); }
+.price-btn.solid-white { background: var(--white); color: var(--dark-blue); }
+.price-btn.solid-white:hover { opacity: 0.9; }
+
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 992px) {
+    .student-container { grid-template-columns: 1fr; }
+    .sidebar { position: fixed; top: 0; left: 0; height: 100vh; width: 260px; transform: translateX(-100%); }
+    .sidebar.open { transform: translateX(0); }
+    .sidebar-close-btn { display: block; }
+    .hamburger-btn { display: block; }
+    .main-content { padding: 20px; }
+    .doubt-portal-grid { grid-template-columns: 1fr; }
+}

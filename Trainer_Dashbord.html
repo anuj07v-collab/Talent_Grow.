@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trainer Dashboard - TalentGrow</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="../style/Dashbord/trainer.css" />
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <div class="trainer-container">
+      <aside class="sidebar" id="trainerSidebar">
+        <div class="sidebar-brand">
+          <h2> TG Trainer</h2>
+          <button class="sidebar-close-btn" id="sidebarCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <nav class="sidebar-menu">
+          <a href="#" class="menu-item active" data-tab="overview"><i class="fa-solid fa-house-laptop"></i> Overview</a>
+          <a href="#" class="menu-item" data-tab="doubts"><i class="fa-solid fa-circle-question"></i> Student Doubts <span class="badge-count" id="doubtCountBadge">0</span></a>
+          <a href="#" class="menu-item" data-tab="assignments"><i class="fa-solid fa-file-pen"></i> Assignments</a>
+          <a href="#" class="menu-item" data-tab="schedule"><i class="fa-solid fa-calendar-days"></i> Live Classes</a>
+        </nav>
+        <div class="sidebar-footer">
+          <div class="trainer-profile-summary">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&q=80" alt="Sarah Jenkins" />
+            <div>
+              <h4>Sarah Jenkins</h4>
+              <p>Expert Instructor</p>
+            </div>
+          </div>
+          <a href="#" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="top-header">
+          <div class="header-left-box">
+            <button class="hamburger-btn" id="mobileToggleBtn"><i class="fa-solid fa-bars"></i></button>
+            <div class="welcome-text">
+              <h1>Welcome Back, Sarah!</h1>
+              <p>Here is what's happening with your cohorts today.</p>
+            </div>
+          </div>
+          <div class="header-actions">
+            <button class="price-btn solid" id="scheduleClassBtn"><i class="fa-solid fa-video"></i> Go Live / Schedule</button>
+          </div>
+        </header>
+
+        <section class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon primary"><i class="fa-solid fa-user-group"></i></div>
+            <div class="stat-info">
+              <h3>Active Mentees</h3>
+              <p>342 Students</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon purple"><i class="fa-solid fa-clock-history"></i></div>
+            <div class="stat-info">
+              <h3>Watch Time Provided</h3>
+              <p>14,800 Hrs</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon green"><i class="fa-solid fa-wallet"></i></div>
+            <div class="stat-info">
+              <h3>Month Earnings</h3>
+              <p>₹1,24,500</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="dashboard-section" id="doubtsSection">
+          <div class="section-header">
+            <div>
+              <h3>Pending Student Doubts & Tickets</h3>
+              <p class="section-subtitle">Resolve real-time system architecture and coding issues from your active batches</p>
+            </div>
+          </div>
+          
+          <div class="doubts-list-wrapper" id="doubtsListContainer">
+            </div>
+        </section>
+
+        <section class="dashboard-section" id="assignmentsSection" style="display: none;">
+          <div class="section-header">
+            <div>
+              <h3>Capstone Assignment Submissions</h3>
+              <p class="section-subtitle">Review code repositories, layout architectures, and provide structural grade feedback</p>
+            </div>
+          </div>
+          
+          <div class="table-responsive">
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>Student</th>
+                  <th>Assignment Topic</th>
+                  <th>Submitted Date</th>
+                  <th>Repository</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="assignmentTableBody">
+                </tbody>
+            </table>
+          </div>
+        </section>
+
+      </main>
+    </div>
+
+    <div class="modal-overlay" id="liveClassModal">
+      <div class="custom-modal">
+        <div class="modal-header">
+          <h3>Schedule Live Cohort Session</h3>
+          <button class="modal-close-x" id="modalCloseX"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <form id="liveClassForm">
+          <div class="form-group">
+            <label>Session Title / Topic</label>
+            <input type="text" id="sessionTitle" required placeholder="e.g., Redis Caching vs Memcached Architecture" />
+          </div>
+          <div class="form-group">
+            <label>Target Batch</label>
+            <select id="sessionBatch">
+              <option value="System Design Masterclass">System Design Masterclass (Cohort 3)</option>
+              <option value="Python Web Development">Python Web Development (Cohort 9)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Timings</label>
+            <input type="time" id="sessionTime" required />
+          </div>
+          <div class="modal-actions">
+            <button type="button" class="price-btn outline" id="closeModalBtn">Cancel</button>
+            <button type="submit" class="price-btn solid">Broadcast Meeting Link</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="../Script/Dashbord/trainer.js"></script>
+    <script src="../Script/Include.js"></script>
+  </body>
+</html>

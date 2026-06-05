@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalentGrow - Premium Learning Platform</title>
+    <!-- Google Fonts & FontAwesome for Exact Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/careers.css">
+</head>
+<body>
+
+    <div id="navbar"></div>
+
+    <!-- SECTION 1: HERO SEARCH & FILTER BAR (As per Screenshot 1) -->
+    <header class="hero-search-section">
+        <div class="hero-wrapper">
+            <!-- Search Bar Input Group -->
+            <div class="search-flex-container">
+                <i class="fa-solid fa-magnifying-glass search-inside-icon"></i>
+                <input type="text" placeholder="Search your favourite course" class="main-search-input">
+                <button class="search-action-btn">Search</button>
+            </div>
+            
+            <!-- Filters Row Layer -->
+            <div class="filters-row">
+                <div class="select-dropdown">
+                    <select>
+                        <option hidden disabled selected>Subject</option>
+                        <option>Web Development</option>
+                        <option>Data Science</option>
+                        <option>UI/UX Design</option>
+                    </select>
+                </div>
+                <div class="select-dropdown">
+                    <select>
+                        <option hidden disabled selected>Partner</option>
+                        <option>Google</option>
+                        <option>Microsoft</option>
+                        <option>IBM</option>
+                    </select>
+                </div>
+                <div class="select-dropdown">
+                    <select>
+                        <option hidden disabled selected>Program</option>
+                        <option>Degree</option>
+                        <option>Certificate</option>
+                        <option>Diploma</option>
+                    </select>
+                </div>
+                <div class="select-dropdown">
+                    <select>
+                        <option hidden disabled selected>Language</option>
+                        <option>English</option>
+                        <option>Hindi</option>
+                        <option>Spanish</option>
+                    </select>
+                </div>
+                <div class="select-dropdown">
+                    <select>
+                        <option hidden disabled selected>Abaliability</option> <!-- Matching layout spelling typo -->
+                        <option>Available Now</option>
+                        <option>Upcoming</option>
+                    </select>
+                </div>
+                <div class="select-dropdown">
+                    <select>
+                        <option hidden disabled selected>Learning Type</option>
+                        <option>Self-Paced</option>
+                        <option>Live Class</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 2: PRIMARY COURSE CATALOGUE GRID -->
+    <main class="main-content-area">
+        <div class="cards-grid-layout" id="main-course-grid">
+            <!-- Hydrated dynamically with 8 cards via script.js -->
+        </div>
+    </main>
+
+    <!-- SECTION 3: SPLIT BANNER PROMO WIDGET (As per Screenshot 2) -->
+    <section class="promo-split-container">
+        <div class="inner-promo-card">
+            <div class="promo-left-details">
+                <h2>Know about learning learning platform</h2>
+                <ul class="promo-bullets-list">
+                    <li><span class="bullet-dot"></span>Free E-book, video & consolation</li>
+                    <li><span class="bullet-dot"></span>Top instructors from around world</li>
+                    <li><span class="bullet-dot"></span>Top courses from your team</li>
+                </ul>
+                <button class="start-learning-btn">Start learning now</button>
+            </div>
+            <div class="promo-right-graphics">
+                <!-- Premium Live Session Graphic Simulator Layout -->
+                <div class="instructor-mockup-frame">
+                    <div class="avatar-card item-1">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" alt="Howard">
+                        <span class="badge-mini-name">Howard</span>
+                    </div>
+                    <div class="avatar-card item-2">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Tamara">
+                        <span class="badge-mini-name">Tamara</span>
+                    </div>
+                    <div class="avatar-card item-3">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Adam">
+                        <span class="badge-mini-name">Adam</span>
+                    </div>
+                    <div class="avatar-card item-4">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Humbert">
+                        <span class="badge-mini-name">Humbert</span>
+                    </div>
+                    <div class="avatar-card item-5">
+                        <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=150&q=80" alt="Patricia">
+                        <span class="badge-mini-name">Patricia</span>
+                    </div>
+                    <div class="call-btn">
+                        <div class="action-capsule blue-cap">Present</div>
+                        <div class="action-capsule pink-cap"><i class="fa fa-phone"></i> Cal</div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: HORIZONTAL RECOMMENDED CAROUSEL -->
+    <section class="outer-tint-wrapper gray-bg">
+        <div class="carousel-section-wrapper">
+            <div class="section-header-flex">
+                <h2 class="block-title">Recommended for you</h2>
+                <a href="#" class="see-all-anchor">See all</a>
+            </div>
+            <div class="horizontal-scroller" id="recommended-scroller">
+                <!-- Hydrated dynamically via script.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: CREATORS OVERLAPPING GEOMETRY CARDS (As per Screenshot 3) -->
+    <section class="carousel-section-wrapper">
+        <div class="section-header-flex">
+            <h2 class="block-title">Classes tought by real creators</h2>
+            <a href="#" class="see-all-anchor">See all</a>
+        </div>
+        <div class="creators-grid-system">
+            <!-- Creator Card 1 -->
+            <div class="creator-profile-card">
+                <div class="creator-img-box">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=250&q=80" alt="Jane Cooper">
+                </div>
+                <div class="creator-meta-body">
+                    <h3>Jane Cooper</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                </div>
+            </div>
+            <!-- Creator Card 2 -->
+            <div class="creator-profile-card">
+                <div class="creator-img-box">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=250&q=80" alt="Adam">
+                </div>
+                <div class="creator-meta-body">
+                    <h3>Adam</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                </div>
+            </div>
+            <!-- Creator Card 3 -->
+            <div class="creator-profile-card">
+                <div class="creator-img-box">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=250&q=80" alt="Tomara">
+                </div>
+                <div class="creator-meta-body">
+                    <h3>Tomara</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: UNIFIED DYNAMIC TESTIMONIAL PANEL (As per Screenshot 4 Top) -->
+    <section class="outer-tint-wrapper teal-bg">
+        <div class="carousel-section-wrapper">
+            <h2 class="block-title margin-gap">What our students have to say</h2>
+            <div class="unified-testimonial-container">
+                <div class="testimonial-left-graphic">
+                    <div class="main-portrait-circle">
+                        <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=400&q=80" id="target-large-avatar" alt="Active Student">
+                    </div>
+                </div>
+                <div class="testimonial-center-content">
+                    <h3 id="live-student-name">Savannah Nguyen</h3>
+                    <span id="live-student-email">tanya.hill@example.com</span>
+                    <p id="live-student-quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <div class="testimonial-socials">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="testimonial-right-stack">
+                    <div class="stacked-avatar active" data-name="Savannah Nguyen" data-email="tanya.hill@example.com" data-img="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=400&q=80">
+                        <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=80&q=80" alt="s1">
+                    </div>
+                    <div class="stacked-avatar" data-name="Kristin Watson" data-email="kristin.w@example.com" data-img="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&q=80" alt="s2">
+                    </div>
+                    <div class="stacked-avatar" data-name="Marvin McKinney" data-email="marvin.mck@example.com" data-img="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=80&q=80" alt="s3">
+                    </div>
+                    <div class="stacked-avatar" data-name="Albert Flores" data-email="albert.f@example.com" data-img="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=80&q=80" alt="s4">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: HIGH INTENSITY DEALS & OFFERS (As per Screenshot 4 Bottom) -->
+    <section class="carousel-section-wrapper">
+        <div class="section-header-flex">
+            <h2 class="block-title">Top Education offers and deals are listed here</h2>
+            <a href="#" class="see-all-anchor">See all</a>
+        </div>
+        <div class="deals-grid-layout">
+            <!-- Deal Card 1 -->
+            <div class="deal-overlay-card">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80" alt="Deal 1" class="deal-bg">
+                <div class="deal-card-content">
+                    <span class="discount-badge badge-teal">50%</span>
+                    <h3>Lorem ipsum dolor</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <!-- Deal Card 2 -->
+            <div class="deal-overlay-card">
+                <img src="https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=600&q=80" alt="Deal 2" class="deal-bg">
+                <div class="deal-card-content">
+                    <span class="discount-badge badge-cyan">10%</span>
+                    <h3>Lorem ipsum dolor</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <!-- Deal Card 3 -->
+            <div class="deal-overlay-card">
+                <img src="https://images.unsplash.com/photo-1513258496099-48168024addd?auto=format&fit=crop&w=600&q=80" alt="Deal 3" class="deal-bg">
+                <div class="deal-card-content">
+                    <span class="discount-badge badge-teal">50%</span>
+                    <h3>Lorem ipsum dolor</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer"> </div>
+     
+    <!-- Project Activation Engine Link -->
+    <script src="./Script/careers.js"></script>
+    <script src="./Script/Include.js"></script>
+
+    
+</body>
+</html>

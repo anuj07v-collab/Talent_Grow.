@@ -1,0 +1,910 @@
+/* ==========================================================================
+   TALENT GROW GLOBAL BRAND DESIGN STYLESHEET
+   ========================================================================== */
+
+:root {
+    --text-main: #111827;
+    --text-muted: #6b7280;
+    --brand-teal: #4cb9b9;
+    --brand-teal-hover: #3ca3a3;
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    --border-line: #f1f5f9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: var(--text-main);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+/* 1. HERO SECTION WITH GLASS FILTERS */
+.hero-search-section {
+    background-image:
+        linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.25)),
+        url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80');
+
+    background-size: cover;
+    background-position: center;
+    padding: 80px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Animation */
+    animation: heroImageLoad 1.5s ease-out forwards;
+}
+
+@keyframes heroImageLoad {
+    0%{
+        opacity: 0;
+        transform: scale(1.1);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.hero-wrapper {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.search-flex-container {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 8px 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.search-inside-icon {
+    color: #9ca3af;
+    font-size: 1.1rem;
+    margin-right: 10px;
+}
+
+.main-search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 12px 10px;
+    font-size: 1rem;
+    color: var(--text-main);
+}
+
+.search-action-btn {
+    background-color: var(--brand-teal);
+    color: #ffffff;
+    border: none;
+    outline: none;
+    padding: 14px 40px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.search-action-btn:hover {
+    background-color: var(--brand-teal-hover);
+}
+
+.filters-row {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+}
+
+.select-dropdown {
+    background: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+.select-dropdown select {
+    width: 90%;
+    border: none;
+    outline: none;
+    padding: 14px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #4b5563;
+    cursor: pointer;
+    background: #ffffff;
+}
+
+/* 2. DYNAMIC PREMIUM CARDS GRID & SCROLLER */
+.main-content-area {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 60px 24px;
+}
+
+.cards-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    gap: 30px;
+}
+
+.course-premium-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    border: 1px solid #f3f4f6;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.course-premium-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    cursor: pointer;
+}
+
+.card-media-header {
+    height: 170px;
+    overflow: hidden;
+    background-color: #f3f4f6;
+}
+
+.card-media-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-inner-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+
+
+.meta-tags-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.meta-tag {
+    font-size: 0.78rem;
+    color: #9ca3af;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 500;
+}
+
+.meta-tag i {
+    color: var(--brand-teal);
+}
+
+.course-title-text {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1f2937;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    min-height: 44px;
+}
+
+.course-excerpt-desc {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.card-footer-profile-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f3f4f6;
+    padding-top: 14px;
+    margin-top: auto;
+}
+
+.author-meta-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.author-meta-container img {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-meta-container span {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #4b5563;
+}
+
+.pricing-block {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.strike-price {
+    font-size: 0.8rem;
+    color: #9ca3af;
+    text-decoration: line-through;
+}
+
+.current-price {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--brand-teal);
+}
+
+/* 3. PROMO SPLIT WIDGET SECTION */
+.promo-split-container {
+    max-width: 1240px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+
+.inner-promo-card {
+    background-color: #edf7f7;
+    border-radius: 24px;
+    padding: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.promo-left-details h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #1e1b4b;
+    margin-bottom: 24px;
+    line-height: 1.3;
+}
+
+.promo-bullets-list {
+    list-style: none;
+    margin-bottom: 35px;
+}
+
+.promo-bullets-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.92rem;
+    color: #4f46e5;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.bullet-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--brand-teal);
+    display: inline-block;
+}
+
+.start-learning-btn {
+    background-color: var(--brand-teal);
+    color: #ffffff;
+    border: none;
+    padding: 16px 32px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.start-learning-btn:hover {
+    background-color: var(--brand-teal-hover);
+
+}
+
+/* Instructor Grid Mockup simulation */
+.promo-right-graphics {
+    position: relative;
+    height: 280px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.7);
+}
+
+.instructor-mockup-frame {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.avatar-card {
+    position: absolute;
+    background: #ffffff;
+    padding: 5px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    width: 80px;
+}
+
+.avatar-card img {
+    width: 100%;
+    height: 70px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.badge-mini-name {
+    font-size: 0.65rem;
+    text-align: center;
+    margin-top: 4px;
+    font-weight: 700;
+    color: #374151;
+}
+
+.item-1 { top: 20px; left: 25px; }
+.item-2 { top: 20px; left: 135px; }
+.item-3 { top: 20px; left: 245px; }
+.item-4 { bottom: 20px; left: 80px; }
+.item-5 { bottom: 20px; left: 190px; }
+
+.action-capsule {
+    position: absolute;
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.blue-cap { background: #3b82f6; bottom: 30px; left: 300px; }
+.pink-cap { background: #ec4899; bottom: 30px; left: 400px; }
+
+/* 4. CAROUSEL & SCROLLER SETS */
+.outer-tint-wrapper {
+    width: 100%;
+}
+.gray-bg { background-color: #f8fafc; }
+.teal-bg { background-color: #f0fdfa; }
+
+.carousel-section-wrapper {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 60px 24px;
+}
+
+.section-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.block-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #111827;
+}
+
+.see-all-anchor {
+    color: var(--brand-teal);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.see-all-anchor:hover{
+    color: var(--text-main);
+}
+
+.horizontal-scroller {
+    display: grid;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    scroll-behavior: smooth;
+    grid-template-columns: repeat(4, 2fr);
+    gap: 30px;
+}
+
+.horizontal-scroller::-webkit-scrollbar {
+    height: 5px;
+}
+
+.horizontal-scroller::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+/* 5. CREATORS SECTION (Screenshot 3 Geometry) */
+.creators-grid-system {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    padding-top: 50px;
+}
+
+.creator-profile-card {
+    position: relative;
+    padding-top: 65px;
+}
+
+.creator-img-box {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    z-index: 2;
+    overflow: hidden;
+    border: 4px solid #ffffff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.creator-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.creator-meta-body {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 85px 24px 35px 24px;
+    text-align: center;
+    box-shadow: var(--card-shadow);
+    cursor: pointer;
+}
+
+.creator-meta-body:hover{
+    border: 1px solid #3ca3a3;
+    cursor: pointer;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.creator-meta-body h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #1f2937;
+}
+
+.creator-meta-body p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* 6. DYNAMIC TESTIMONIAL PLATFORM (Screenshot 4) */
+.margin-gap { margin-bottom: 40px; }
+
+.unified-testimonial-container {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 0.5fr;
+    gap: 40px;
+    align-items: center;
+    box-shadow: var(--card-shadow);
+}
+
+.main-portrait-circle {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background-color: #cffafe;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.main-portrait-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.2s ease;
+}
+
+.testimonial-center-content h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 4px;
+}
+
+#live-student-email {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 20px;
+}
+
+#live-student-quote {
+    font-size: 0.9rem;
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 24px;
+    transition: opacity 0.2s ease;
+}
+
+.testimonial-socials {
+    display: flex;
+    gap: 14px;
+}
+
+.testimonial-socials a {
+    color: var(--brand-teal);
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+.testimonial-socials a:hover {
+    color: var(--brand-teal-hover);
+}
+
+.testimonial-right-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+}
+
+.stacked-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    opacity: 0.4;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stacked-avatar.active, .stacked-avatar:hover {
+    opacity: 1;
+    border-color: var(--brand-teal);
+    transform: scale(1.15);
+}
+
+.stacked-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 7. HIGH-INTENSITY DEALS DESIGN */
+.deals-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.deal-overlay-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 300px;
+    box-shadow: var(--card-shadow);
+}
+
+.deal-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: transform 0.4s ease;
+}
+
+.deal-overlay-card:hover .deal-bg {
+    transform: scale(1.05);
+}
+
+.deal-overlay-card::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 25%, rgba(0,0,0,0.1) 100%);
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+
+.deal-card-content {
+    position: relative;
+    z-index: 3;
+    height: 100%;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #ffffff;
+}
+
+.discount-badge {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 800;
+    font-size: 1.15rem;
+}
+
+.badge-teal { background-color: #3aa1a1; color: #ffffff; }
+.badge-cyan { background-color: #22d3ee; color: #0f172a; }
+
+.deal-card-content h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.deal-card-content p {
+    font-size: 0.82rem;
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+
+/* RESPONSIVE LAYOUT BREAKPOINTS */
+@media (max-width: 1100px) {
+    .cards-grid-layout { grid-template-columns: repeat(3, 1fr); }
+    .filters-row { grid-template-columns: repeat(3, 1fr); }
+    .inner-promo-card, .unified-testimonial-container { grid-template-columns: 1fr; }
+    .testimonial-right-stack { flex-direction: row; justify-content: center; }
+}
+
+@media (max-width: 768px) {
+    .cards-grid-layout, .deals-grid-layout { grid-template-columns: repeat(2, 1fr); }
+    .creators-grid-system { grid-template-columns: 1fr; gap: 80px; }
+    .filters-row { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+    .cards-grid-layout, .deals-grid-layout, .filters-row { grid-template-columns: 1fr; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   SMOOTH ANIMATIONS
+========================= */
+
+html{
+    scroll-behavior:smooth;
+}
+
+.course-premium-card,
+.creator-profile-card,
+.deal-overlay-card,
+.inner-promo-card,
+.unified-testimonial-container{
+    opacity:0;
+    transform:translateY(50px);
+    transition:all .8s ease;
+}
+
+.show-element{
+    opacity:1 !important;
+    transform:translateY(0) !important;
+}
+
+/* Image Hover */
+
+.card-media-header img,
+.creator-img-box img,
+.main-portrait-circle img,
+.deal-bg{
+    transition:transform .5s ease;
+}
+
+.course-premium-card:hover .card-media-header img,
+.creator-profile-card:hover .creator-img-box img,
+.deal-overlay-card:hover .deal-bg{
+    transform:scale(1.08);
+}
+
+/* Buttons */
+
+.search-action-btn,
+.start-learning-btn{
+    transition:.3s ease;
+}
+
+.search-action-btn:hover,
+.start-learning-btn:hover{
+    transform:translateY(-3px);
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#4cb9b9;
+    border-radius:20px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1200px){
+
+.cards-grid-layout{
+    grid-template-columns:repeat(3,1fr);
+}
+
+.horizontal-scroller{
+    grid-template-columns:repeat(3,1fr);
+}
+}
+
+@media(max-width:992px){
+
+.hero-wrapper{
+    gap:15px;
+}
+
+.search-flex-container{
+    flex-direction:column;
+    gap:15px;
+}
+
+.main-search-input{
+    width:100%;
+}
+
+.search-action-btn{
+    width:100%;
+}
+
+.cards-grid-layout{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.deals-grid-layout{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.inner-promo-card{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+
+.unified-testimonial-container{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+
+.main-portrait-circle{
+    margin:auto;
+}
+
+.testimonial-socials{
+    justify-content:center;
+}
+}
+
+@media(max-width:768px){
+
+.filters-row{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.cards-grid-layout,
+.deals-grid-layout{
+    grid-template-columns:1fr;
+}
+
+.horizontal-scroller{
+    display:flex;
+    overflow-x:auto;
+    gap:20px;
+}
+
+.horizontal-scroller .course-premium-card{
+    min-width:300px;
+}
+
+.inner-promo-card{
+    padding:30px;
+}
+
+.hero-search-section{
+    padding:50px 15px;
+}
+
+.main-content-area{
+    padding:40px 15px;
+}
+
+.carousel-section-wrapper{
+    padding:40px 15px;
+}
+}
+
+@media(max-width:480px){
+
+.filters-row{
+    grid-template-columns:1fr;
+}
+
+.promo-left-details h2{
+    font-size:1.5rem;
+}
+
+.block-title{
+    font-size:1.2rem;
+}
+
+.hero-search-section{
+    padding:40px 10px;
+}
+
+.search-action-btn{
+    padding:12px;
+}
+
+.main-portrait-circle{
+    width:180px;
+    height:180px;
+}
+}

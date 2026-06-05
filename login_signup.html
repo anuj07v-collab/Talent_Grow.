@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Register | Edunexa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style/login_signup.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="image-section">
+            <img id="dynamic-img" src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=800&q=80" alt="Classroom">
+            <div class="image-overlay">
+                <h2>Lorem Ipsum is simply</h2>
+                <p>Lorem Ipsum is simply dummy text</p>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="form-wrapper">
+                <p class="welcome-text">Welcome to lorem..!</p>
+
+                <div class="tab-container">
+                    <button class="tab-btn active" id="login-tab" onclick="switchTab('login')">Login</button>
+                    <button class="tab-btn" id="register-tab" onclick="switchTab('register')">Register</button>
+                </div>
+
+                <p class="dummy-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+
+                <form id="login-form" class="auth-form active">
+                    <div class="input-group">
+                        <label>User name</label>
+                        <input type="text" placeholder="Enter your User name" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Password</label>
+                        <div class="password-wrapper">
+                            <input type="password" placeholder="Enter your Password" class="password-field" required>
+                            <i class="fa-regular fa-eye-slash toggle-password"></i>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <label class="remember-me">
+                            <input type="checkbox"> Remember me
+                        </label>
+                        <a href="#" class="forgot-pass">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="submit-btn">Login</button>
+                </form>
+
+                <form id="register-form" class="auth-form">
+                    <div class="input-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="Enter your Email Address" required>
+                    </div>
+                    <div class="input-group">
+                        <label>User name</label>
+                        <input type="text" placeholder="Enter your User name" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Password</label>
+                        <div class="password-wrapper">
+                            <input type="password" placeholder="Enter your Password" class="password-field" required>
+                            <i class="fa-regular fa-eye-slash toggle-password"></i>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn">Register</button>
+                </form>
+
+                <div class="social-separator">
+                    <span>Or Sign in with</span>
+                </div>
+                <div class="social-login">
+                    <a href="#" class="social-icon google"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="social-icon facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon github"><i class="fa-brands fa-github"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="./Script/login_signup.js"></script>
+    <script src="./Script/Include.js"></script>
+</body>
+</html>

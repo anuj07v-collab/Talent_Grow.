@@ -1,0 +1,416 @@
+/* ==========================================================================
+   TALENT GROW - BRAND VARIABLES & UNIVERSAL RESET
+   ========================================================================== */
+:root {
+    --primary-teal: #49bcbc;
+    --primary-hover: #3ca5a5;
+    --dark-slate: #212540;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --text-light: #94a3b8;
+    --pure-white: #ffffff;
+    --summary-bg: #ebf5ff;
+    --border-grey: #cbd5e1;
+    --error-red: #ef4444;
+    --success-green: #22c55e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--pure-white);
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+/* Common Layout Wrapper */
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 24px;
+}
+
+.row-space {
+    padding-top: 10px;
+    padding-bottom: 60px;
+}
+
+.block-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.block-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--dark-slate);
+}
+
+.see-all-link {
+    color: var(--primary-teal);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.see-all-link:hover {
+    color: var(--primary-hover);
+}
+
+/* ==========================================================================
+   CHECKOUT TWO-COLUMN GRID LAYOUT
+   ========================================================================== */
+.checkout-section-layout {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    gap: 40px;
+    align-items: start;
+    padding-top: 40px;
+}
+
+/* Left Form Box */
+.checkout-card-form {
+    background: var(--pure-white);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.checkout-card-form h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--dark-slate);
+    margin-bottom: 25px;
+}
+
+.input-main-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 12px;
+}
+
+/* Payment Gateway Provider Selector Tabs */
+.cart-type-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 28px;
+}
+
+.provider-tab {
+    border: 1px solid var(--border-grey);
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 54px;
+    cursor: pointer;
+    background-color: var(--pure-white);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.provider-tab img {
+    max-height: 24px;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.provider-tab:hover {
+    border-color: var(--primary-teal);
+}
+
+.provider-tab.active {
+    border-color: var(--primary-teal);
+    background-color: rgba(73, 188, 188, 0.05);
+    box-shadow: 0 4px 10px rgba(73, 188, 188, 0.1);
+}
+
+/* Form Styling & Native Control Override */
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--border-grey);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    outline: none;
+    color: var(--text-main);
+    transition: all 0.2s ease;
+}
+
+.form-group input:focus {
+    border-color: var(--primary-teal);
+    box-shadow: 0 0 0 3px rgba(73, 188, 188, 0.1);
+}
+
+.form-row-split {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 16px;
+}
+
+/* Dynamic Interactive Error States */
+.error-msg {
+    font-size: 0.75rem;
+    color: var(--error-red);
+    display: none;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.form-group.invalid input {
+    border-color: var(--error-red);
+    background-color: #fff5f5;
+}
+
+.form-group.invalid .error-msg {
+    display: block;
+}
+
+/* Save Info Checkbox Layout */
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.checkbox-row input {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary-teal);
+    cursor: pointer;
+}
+
+.checkbox-row label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn-confirm-payment {
+    width: 100%;
+    background-color: var(--primary-teal);
+    color: var(--pure-white);
+    border: none;
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(73, 188, 188, 0.25);
+    transition: all 0.2s ease;
+}
+
+.btn-confirm-payment:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   ORDER SUMMARY SIDEBAR
+   ========================================================================== */
+.summary-sidebar-box {
+    background-color: var(--summary-bg);
+    border-radius: 16px;
+    padding: 26px;
+    border: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+.summary-sidebar-box h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--dark-slate);
+    margin-bottom: 20px;
+}
+
+.summary-items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.summary-item-card {
+    display: flex;
+    gap: 14px;
+    background: var(--pure-white);
+    padding: 14px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01);
+}
+
+.summary-item-card img {
+    width: 75px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.item-meta-info {
+    flex: 1;
+}
+
+.item-meta-info h4 {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--dark-slate);
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 2px;
+}
+
+.item-meta-info p {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    margin-bottom: 6px;
+}
+
+.item-price {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+/* Calculation Breakdown Area */
+.calc-table-summary {
+    border-top: 1px dashed rgba(148, 163, 184, 0.3);
+    padding-top: 18px;
+    margin-top: 22px;
+}
+
+.calc-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.calc-row.total-row {
+    border-top: 1px solid rgba(148, 163, 184, 0.2);
+    padding-top: 14px;
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--dark-slate);
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+   OFFERS AND DEALS SECTION
+   ========================================================================== */
+.deals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.deal-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 260px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02);
+}
+
+.deal-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.deal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(33, 37, 64, 0.95) 0%, rgba(33, 37, 64, 0.2) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 22px;
+    color: var(--pure-white);
+}
+
+.discount-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background-color: var(--primary-teal);
+    color: var(--pure-white);
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-weight: 800;
+    font-size: 0.9rem;
+}
+
+.cyan-bg-badge {
+    background-color: #3b82f6;
+}
+
+.deal-overlay h4 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.deal-overlay p {
+    font-size: 0.8rem;
+    color: #cbd5e1;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ==========================================================================
+   RESPONSIVE LAYOUT BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 992px) {
+    .checkout-section-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .cart-type-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .form-row-split {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .checkout-card-form {
+        padding: 20px 16px;
+    }
+}

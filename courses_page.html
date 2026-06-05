@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>courses</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style/courses.css">
+</head>
+<body>
+
+     <div id="navbar"></div>
+
+
+     <main class="hero-section">
+        <div class="hero-container">
+            <div class="hero-left">
+                <span class="author-tag">Empowering IT Careers with <span class="category-highlight">Structured Learning</span></span>
+                <h1>Advance Your Tech Skills With <span class="category-highlight">Talent Grow Management System</h1></span>
+                <p>Manage corporate batches, track student progress, and deploy industry-grade IT curriculum. Explore cutting-edge cloud, development, and cybersecurity environments in one unified platform.</p>
+                <button class="btn-cta">Explore Management Console</button>
+            </div>
+            <div class="hero-right">
+                <div class="hero-img-box">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="IT Training Batch">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="welcome-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Welcome back, ready for your next lesson?</h2>
+                <div style="display: flex; align-items: center; gap: 16px;">
+                    <a href="#" class="view-all">View history</a>
+                    <div class="slider-controls">
+                        <button class="control-btn" id="prevBtn" aria-label="Previous Slides"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button class="control-btn" id="nextBtn" aria-label="Next Slides"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-wrapper">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="welcome-card">
+                        <div class="img-container">
+                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=500&q=80" alt="AWS Class Presentation">
+                        </div>
+                        <h3>AWS Certified Solutions Architect</h3>
+                        <div class="author-row">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Lina" class="author-avatar">
+                            <span class="author-name">Lina</span>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-bar"><div class="progress-fill" style="width: 71%;"></div></div>
+                            <span class="lesson-count">Lesson 5 of 7</span>
+                        </div>
+                    </div>
+                    <div class="welcome-card">
+                        <div class="img-container">
+                            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=500&q=80" alt="Students Analyzing Metrics">
+                        </div>
+                        <h3>AWS Certified Solutions Architect</h3>
+                        <div class="author-row">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Lina" class="author-avatar">
+                            <span class="author-name">Lina</span>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-bar"><div class="progress-fill" style="width: 71%;"></div></div>
+                            <span class="lesson-count">Lesson 5 of 7</span>
+                        </div>
+                    </div>
+                    <div class="welcome-card">
+                        <div class="img-container">
+                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=500&q=80" alt="IDE Coding Screen Interface">
+                        </div>
+                        <h3>AWS Certified Solutions Architect</h3>
+                        <div class="author-row">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Lina" class="author-avatar">
+                            <span class="author-name">Lina</span>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-bar"><div class="progress-fill" style="width: 71%;"></div></div>
+                            <span class="lesson-count">Lesson 5 of 7</span>
+                        </div>
+                    </div>
+                    <div class="welcome-card">
+                        <div class="img-container">
+                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=500&q=80" alt="E-learning workstation">
+                        </div>
+                        <h3>Advanced Cloud Security Practices</h3>
+                        <div class="author-row">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Lina" class="author-avatar">
+                            <span class="author-name">Lina</span>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-bar"><div class="progress-fill" style="width: 40%;"></div></div>
+                            <span class="lesson-count">Lesson 2 of 5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="category-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Choice favourite course from top category</h2>
+            </div>
+            <div class="category-grid">
+                <div class="category-card">
+                    <div class="icon-box teal"><i class="fa-solid fa-pen-nib"></i></div>
+                    <h4>Design</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                </div>
+                <div class="category-card">
+                    <div class="icon-box purple"><i class="fa-solid fa-laptop-code"></i></div>
+                    <h4>Development</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                </div>
+                <div class="category-card">
+                    <div class="icon-box teal"><i class="fa-solid fa-database"></i></div>
+                    <h4>Development</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                </div>
+                <div class="category-card">
+                    <div class="icon-box teal"><i class="fa-solid fa-briefcase"></i></div>
+                    <h4>Business</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                </div>
+                <div class="category-card">
+                    <div class="icon-box orange"><i class="fa-solid fa-bullhorn"></i></div>
+                    <h4>Marketing</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                </div>
+                <div class="category-card">
+                    <div class="icon-box pink"><i class="fa-solid fa-camera"></i></div>
+                    <h4>Photography</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                </div>
+                <div class="category-card">
+                    <div class="icon-box purple"><i class="fa-solid fa-clapperboard"></i></div>
+                    <h4>Acting</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                </div>
+                <div class="category-card">
+                    <div class="icon-box teal"><i class="fa-solid fa-chart-line"></i></div>
+                    <h4>Business</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="courses-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Recommended for you</h2>
+                <a href="#" class="view-all">See all</a>
+            </div>
+            <div class="course-grid-row">
+                <div class="course-card">
+                    <div class="course-img-wrap"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=500&q=80" alt="Kid learning via Tablet"></div>
+                    <div class="meta-tags">
+                        <span class="tag-category"><i class="fa-solid fa-border-all"></i> Design</span>
+                        <span class="tag-duration"><i class="fa-regular fa-clock"></i> 3 Month</span>
+                    </div>
+                    <h3>AWS Certified solutions Architect</h3>
+                    <p class="course-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                    <div class="course-footer">
+                        <div class="author-row" style="margin-bottom:0;">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Lina" class="author-avatar">
+                            <span class="author-name">Lina</span>
+                        </div>
+                        <div class="price-box"><span class="old-price">$100</span><span class="new-price">$80</span></div>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-img-wrap"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=500&q=80" alt="Workspace presentation"></div>
+                    <div class="meta-tags">
+                        <span class="tag-category"><i class="fa-solid fa-border-all"></i> Design</span>
+                        <span class="tag-duration"><i class="fa-regular fa-clock"></i> 3 Month</span>
+                    </div>
+                    <h3>AWS Certified solutions Architect</h3>
+                    <p class="course-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                    <div class="course-footer">
+                        <div class="author-row" style="margin-bottom:0;">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Lina" class="author-avatar">
+                            <span class="author-name">Lina</span>
+                        </div>
+                        <div class="price-box"><span class="old-price">$100</span><span class="new-price">$80</span></div>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-img-wrap"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=500&q=80" alt="Kid learning via Tablet"></div>
+                    <div class="meta-tags">
+                        <span class="tag-category"><i class="fa-solid fa-border-all"></i> Design</span>
+                        <span class="tag-duration"><i class="fa-regular fa-clock"></i> 3 Month</span>
+                    </div>
+                    <h3>AWS Certified solutions Architect</h3>
+                    <p class="course-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                    <div class="course-footer">
+                        <div class="author-row" style="margin-bottom:0;">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Lina" class="author-avatar">
+                            <span class="author-name">Lina</span>
+                        </div>
+                        <div class="price-box"><span class="old-price">$100</span><span class="new-price">$80</span></div>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-img-wrap"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=500&q=80" alt="Workspace presentation"></div>
+                    <div class="meta-tags">
+                        <span class="tag-category"><i class="fa-solid fa-border-all"></i> Design</span>
+                        <span class="tag-duration"><i class="fa-regular fa-clock"></i> 3 Month</span>
+                    </div>
+                    <h3>AWS Certified solutions Architect</h3>
+                    <p class="course-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                    <div class="course-footer">
+                        <div class="author-row" style="margin-bottom:0;">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Lina" class="author-avatar">
+                            <span class="author-name">Lina</span>
+                        </div>
+                        <div class="price-box"><span class="old-price">$100</span><span class="new-price">$80</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="courses-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get choice of your course</h2>
+                <a href="#" class="view-all">See all</a>
+            </div>
+            <div class="course-grid-row">
+                <div class="course-card">
+                    <div class="course-img-wrap"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=500&q=80" alt=""></div>
+                    <div class="meta-tags">
+                        <span class="tag-category"><i class="fa-solid fa-border-all"></i> Design</span>
+                        <span class="tag-duration"><i class="fa-regular fa-clock"></i> 3 Month</span>
+                    </div>
+                    <h3>AWS Certified solutions Architect</h3>
+                    <p class="course-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                    <div class="course-footer">
+                        <div class="author-row" style="margin-bottom:0;">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Lina" class="author-avatar">
+                            <span class="author-name">Lina</span>
+                        </div>
+                        <div class="price-box"><span class="old-price">$100</span><span class="new-price">$80</span></div>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-img-wrap"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=500&q=80" alt=""></div>
+                    <div class="meta-tags">
+                        <span class="tag-category"><i class="fa-solid fa-border-all"></i> Design</span>
+                        <span class="tag-duration"><i class="fa-regular fa-clock"></i> 3 Month</span>
+                    </div>
+                    <h3>AWS Certified solutions Architect</h3>
+                    <p class="course-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                    <div class="course-footer">
+                        <div class="author-row" style="margin-bottom:0;">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Lina" class="author-avatar">
+                            <span class="author-name">Lina</span>
+                        </div>
+                        <div class="price-box"><span class="old-price">$100</span><span class="new-price">$80</span></div>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-img-wrap"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=500&q=80" alt=""></div>
+                    <div class="meta-tags">
+                        <span class="tag-category"><i class="fa-solid fa-border-all"></i> Design</span>
+                        <span class="tag-duration"><i class="fa-regular fa-clock"></i> 3 Month</span>
+                    </div>
+                    <h3>AWS Certified solutions Architect</h3>
+                    <p class="course-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                    <div class="course-footer">
+                        <div class="author-row" style="margin-bottom:0;">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Lina" class="author-avatar">
+                            <span class="author-name">Lina</span>
+                        </div>
+                        <div class="price-box"><span class="old-price">$100</span><span class="new-price">$80</span></div>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-img-wrap"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=500&q=80" alt=""></div>
+                    <div class="meta-tags">
+                        <span class="tag-category"><i class="fa-solid fa-border-all"></i> Design</span>
+                        <span class="tag-duration"><i class="fa-regular fa-clock"></i> 3 Month</span>
+                    </div>
+                    <h3>AWS Certified solutions Architect</h3>
+                    <p class="course-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                    <div class="course-footer">
+                        <div class="author-row" style="margin-bottom:0;">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Lina" class="author-avatar">
+                            <span class="author-name">Lina</span>
+                        </div>
+                        <div class="price-box"><span class="old-price">$100</span><span class="new-price">$80</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="banner-section">
+        <div class="container">
+            <div class="cta-banner">
+                <h2>Online coaching lessons for remote learning.</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                <button class="cta-btn">Start learning now</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="courses-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">The course in personal development</h2>
+                <a href="#" class="view-all">See all</a>
+            </div>
+            <div class="course-grid-row">
+                <div class="course-card">
+                    <div class="course-img-wrap"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=500&q=80" alt=""></div>
+                    <div class="meta-tags">
+                        <span class="tag-category"><i class="fa-solid fa-border-all"></i> Design</span>
+                        <span class="tag-duration"><i class="fa-regular fa-clock"></i> 3 Month</span>
+                    </div>
+                    <h3>AWS Certified solutions Architect</h3>
+                    <p class="course-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                    <div class="course-footer">
+                        <div class="author-row" style="margin-bottom:0;">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Lina" class="author-avatar">
+                            <span class="author-name">Lina</span>
+                        </div>
+                        <div class="price-box"><span class="old-price">$100</span><span class="new-price">$80</span></div>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-img-wrap"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=500&q=80" alt=""></div>
+                    <div class="meta-tags">
+                        <span class="tag-category"><i class="fa-solid fa-border-all"></i> Design</span>
+                        <span class="tag-duration"><i class="fa-regular fa-clock"></i> 3 Month</span>
+                    </div>
+                    <h3>AWS Certified solutions Architect</h3>
+                    <p class="course-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                    <div class="course-footer">
+                        <div class="author-row" style="margin-bottom:0;">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Lina" class="author-avatar">
+                            <span class="author-name">Lina</span>
+                        </div>
+                        <div class="price-box"><span class="old-price">$100</span><span class="new-price">$80</span></div>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-img-wrap"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=500&q=80" alt=""></div>
+                    <div class="meta-tags">
+                        <span class="tag-category"><i class="fa-solid fa-border-all"></i> Design</span>
+                        <span class="tag-duration"><i class="fa-regular fa-clock"></i> 3 Month</span>
+                    </div>
+                    <h3>AWS Certified solutions Architect</h3>
+                    <p class="course-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                    <div class="course-footer">
+                        <div class="author-row" style="margin-bottom:0;">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Lina" class="author-avatar">
+                            <span class="author-name">Lina</span>
+                        </div>
+                        <div class="price-box"><span class="old-price">$100</span><span class="new-price">$80</span></div>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-img-wrap"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=500&q=80" alt=""></div>
+                    <div class="meta-tags">
+                        <span class="tag-category"><i class="fa-solid fa-border-all"></i> Design</span>
+                        <span class="tag-duration"><i class="fa-regular fa-clock"></i> 3 Month</span>
+                    </div>
+                    <h3>AWS Certified solutions Architect</h3>
+                    <p class="course-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                    <div class="course-footer">
+                        <div class="author-row" style="margin-bottom:0;">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Lina" class="author-avatar">
+                            <span class="author-name">Lina</span>
+                        </div>
+                        <div class="price-box"><span class="old-price">$100</span><span class="new-price">$80</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="courses-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Student are viewing</h2>
+                <a href="#" class="view-all">See all</a>
+            </div>
+            <div class="course-grid-row">
+                <div class="course-card">
+                    <div class="course-img-wrap"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=500&q=80" alt=""></div>
+                    <div class="meta-tags">
+                        <span class="tag-category"><i class="fa-solid fa-border-all"></i> Design</span>
+                        <span class="tag-duration"><i class="fa-regular fa-clock"></i> 3 Month</span>
+                    </div>
+                    <h3>AWS Certified solutions Architect</h3>
+                    <p class="course-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                    <div class="course-footer">
+                        <div class="author-row" style="margin-bottom:0;">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Lina" class="author-avatar">
+                            <span class="author-name">Lina</span>
+                        </div>
+                        <div class="price-box"><span class="old-price">$100</span><span class="new-price">$80</span></div>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-img-wrap"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=500&q=80" alt=""></div>
+                    <div class="meta-tags">
+                        <span class="tag-category"><i class="fa-solid fa-border-all"></i> Design</span>
+                        <span class="tag-duration"><i class="fa-regular fa-clock"></i> 3 Month</span>
+                    </div>
+                    <h3>AWS Certified solutions Architect</h3>
+                    <p class="course-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                    <div class="course-footer">
+                        <div class="author-row" style="margin-bottom:0;">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Lina" class="author-avatar">
+                            <span class="author-name">Lina</span>
+                        </div>
+                        <div class="price-box"><span class="old-price">$100</span><span class="new-price">$80</span></div>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-img-wrap"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=500&q=80" alt=""></div>
+                    <div class="meta-tags">
+                        <span class="tag-category"><i class="fa-solid fa-border-all"></i> Design</span>
+                        <span class="tag-duration"><i class="fa-regular fa-clock"></i> 3 Month</span>
+                    </div>
+                    <h3>AWS Certified solutions Architect</h3>
+                    <p class="course-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                    <div class="course-footer">
+                        <div class="author-row" style="margin-bottom:0;">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Lina" class="author-avatar">
+                            <span class="author-name">Lina</span>
+                        </div>
+                        <div class="price-box"><span class="old-price">$100</span><span class="new-price">$80</span></div>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-img-wrap"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=500&q=80" alt=""></div>
+                    <div class="meta-tags">
+                        <span class="tag-category"><i class="fa-solid fa-border-all"></i> Design</span>
+                        <span class="tag-duration"><i class="fa-regular fa-clock"></i> 3 Month</span>
+                    </div>
+                    <h3>AWS Certified solutions Architect</h3>
+                    <p class="course-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                    <div class="course-footer">
+                        <div class="author-row" style="margin-bottom:0;">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Lina" class="author-avatar">
+                            <span class="author-name">Lina</span>
+                        </div>
+                        <div class="price-box"><span class="old-price">$100</span><span class="new-price">$80</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+
+
+    <script src="./Script/courses.js"></script>
+    <script src="./Script/Include.js"></script>
+</body>
+</html>

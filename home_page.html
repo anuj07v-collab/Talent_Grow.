@@ -1,0 +1,3375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Talent Grow | IT Training Expert</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+        integrity="sha512-XcIsjKMcuVe0Ucj/xgIXQnytNwBttJbNjltBV18IOnru2lDPe9KRRyvCXw6Y5H415vbBLRm8+q6fmLUU7DfO6Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        :root {
+            --primary: #49bcbc;
+            --primary-hover: #3da3a3;
+            --accent: #ffa500;
+            --light-teal: #7de2e2;
+            --dark-blue: #2b2f7f;
+            --text-gray: #777;
+            --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f9fbff;
+            color: var(--dark-blue);
+            overflow-x: hidden;
+        }
+
+        /* =================== NAVBAR ========================= */
+        .navbar {
+            background: linear-gradient(to right, #f8f4f4 0%, #f1eeee 20%, var(--primary) 40%);
+            padding: 12px 3%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            animation: slideDown 0.6s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+            transition: var(--transition);
+        }
+
+        
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #fdfbfb;
+            text-decoration: none;
+            font-size: 16px;
+            transition: var(--transition);
+            position: relative;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: var(--dark-blue);
+            transform: translateY(-2px);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--dark-blue);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .nav-btns {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-btns button {
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+            font-size: 13px;
+        }
+
+        .login {
+            background: rgb(243, 243, 245);
+            color: var(--primary);
+        }
+
+        .login:hover {
+            background: #dbdada;
+            color: var(--dark-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .signup {
+            background: #ffa500;
+            color: white;
+        }
+
+        .signup:hover {
+            background: #ff8c00;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 165, 0, 0.3);
+        }
+
+        /* HAMBURGER MENU */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 6px;
+        }
+
+        .hamburger span {
+            width: 28px;
+            height: 3px;
+            background: white;
+            border-radius: 3px;
+            transition: var(--transition);
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        /* HERO */
+        .hero {
+            position: relative;
+            background: var(--primary);
+            padding: 60px 8%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            overflow: hidden;
+            padding-top: 140px;
+            gap: 50px;
+        }
+
+        .hero-left {
+            width: 45%;
+            animation: fadeInLeft 0.8s ease-out;
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .hero-left h1 {
+            font-size: 52px;
+            line-height: 1.2;
+            font-weight: 800;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .dark_blue {
+            color: var(--dark-blue);
+        }
+
+        .hero-left p {
+            margin: 25px 0;
+            font-size: 18px;
+            line-height: 1.6;
+            opacity: 0.95;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+        }
+
+        .primary-btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 15px 35px;
+            border-radius: 30px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            transition: var(--transition);
+            font-size: 14px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .primary-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .primary-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .primary-btn:hover {
+            background: #e69500;
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(255, 165, 0, 0.4);
+        }
+
+        .primary-btn:active {
+            transform: translateY(-2px) scale(0.98);
+        }
+
+        .watch {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .watch:hover {
+            transform: scale(1.05);
+        }
+
+        .play {
+            background: white;
+            color: var(--primary);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+                transform: scale(1);
+            }
+
+            50% {
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+                transform: scale(1.1);
+            }
+        }
+
+        /* HERO RIGHT - IMAGE */
+        .hero-right {
+            width: 50%;
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            animation: fadeInRight 0.8s ease-out;
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .student-img {
+            width: 450px;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+            z-index: 1;
+            transition: var(--transition);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .student-img:hover {
+            box-shadow: 0 30px 50px rgba(0, 0, 0, 0.35);
+        }
+
+        /* FLOATING CARDS */
+        .float-card {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            color: #333;
+            padding: 18px;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            z-index: 3;
+            transition: var(--transition);
+            animation: slideInCard 0.6s ease-out;
+        }
+
+        @keyframes slideInCard {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .float-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .card1 {
+            top: 5%;
+            left: 8px;
+            animation-delay: 0.3s;
+        }
+
+        .card2 {
+            top: 70%;
+            right: -50px;
+            border-right: 5px solid #27d3a2;
+            animation-delay: 0.6s;
+        }
+
+        .card3 {
+            bottom: 10%;
+            left: -8%;
+            animation-delay: 0.9s;
+        }
+
+        .card3 button {
+            margin-top: 10px;
+            background: #ff5b8f;
+            border: none;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .card3 button:hover {
+            background: #ff3d7f;
+            transform: scale(1.05);
+        }
+
+        .curve {
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 120px;
+        }
+
+        /* ============== SUCCESS SECTION ======================*/
+        /* ==========================
+   SUCCESS SECTION
+========================== */
+
+        .successSec {
+            padding: 90px 5%;
+            background: linear-gradient(180deg, #f9fbff 0%, #eef9f9 100%);
+        }
+
+        .successCard {
+            background: #fff;
+            border-radius: 35px;
+            padding: 60px 40px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .successCard::before {
+            content: "";
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 250px;
+            height: 250px;
+            background: rgba(73, 188, 188, .08);
+            border-radius: 50%;
+        }
+
+        .successCard h2 {
+            font-size: 48px;
+            color: #2b2f7f;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .successSub {
+            max-width: 750px;
+            margin: auto;
+            color: #777;
+            line-height: 1.8;
+            font-size: 16px;
+            margin-bottom: 60px;
+        }
+
+        /* ==========================
+   STATS
+========================== */
+
+        .statsRow {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 25px;
+            margin-bottom: 70px;
+        }
+
+        .stat {
+            background: linear-gradient(135deg, #ffffff, #f5ffff);
+            border: 1px solid rgba(73, 188, 188, .15);
+            border-radius: 22px;
+            padding: 30px 20px;
+            transition: .4s ease;
+            cursor: pointer;
+        }
+
+        .stat:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(73, 188, 188, .18);
+        }
+
+        .num {
+            font-size: 40px;
+            font-weight: 700;
+            color: #49bcbc;
+            margin-bottom: 10px;
+        }
+
+        .lbl {
+            color: #2b2f7f;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .suffix {
+            color: #49bcbc;
+        }
+
+        /* ==========================
+   TRUSTED BY
+========================== */
+
+        .proStrip {
+            margin-top: 20px;
+        }
+
+        .stripHead {
+            margin-bottom: 35px;
+        }
+
+        .stripTitle {
+            font-size: 32px;
+            font-weight: 700;
+            color: #2b2f7f;
+        }
+
+        .stripSub {
+            color: #777;
+            margin-top: 8px;
+        }
+
+        /* ==========================
+   MARQUEE
+========================== */
+
+        .marquee {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            padding: 15px 0;
+        }
+
+        .track {
+            display: flex;
+            gap: 20px;
+            width: max-content;
+            animation: scrollLogo 30s linear infinite;
+        }
+
+        .marquee:hover .track {
+            animation-play-state: paused;
+        }
+
+        @keyframes scrollLogo {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* ==========================
+   LOGO CARD
+========================== */
+
+        .logoPill {
+            min-width: 220px;
+            background: #fff;
+            border: 1px solid rgba(73, 188, 188, .15);
+            border-radius: 18px;
+            padding: 18px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            transition: .3s;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, .05);
+        }
+
+        .logoPill:hover {
+            transform: translateY(-3px);
+            border-color: #49bcbc;
+            box-shadow: 0 15px 40px rgba(73, 188, 188, .18);
+        }
+
+        .logoImg {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+
+        .logoText {
+            font-size: 16px;
+            font-weight: 600;
+            color: #2b2f7f;
+        }
+
+        /* ==========================
+   FADE EFFECT
+========================== */
+
+        .stripFade {
+            position: absolute;
+            top: 0;
+            width: 120px;
+            height: 100%;
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        .stripFade.left {
+            left: 0;
+            background: linear-gradient(to right, #fff, transparent);
+        }
+
+        .stripFade.right {
+            right: 0;
+            background: linear-gradient(to left, #fff, transparent);
+        }
+
+        /* ==========================
+   RESPONSIVE
+========================== */
+
+        @media(max-width:1200px) {
+
+            .statsRow {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+        }
+
+        @media(max-width:768px) {
+
+            .successSec {
+                padding: 60px 20px;
+            }
+
+            .successCard {
+                padding: 40px 20px;
+            }
+
+            .successCard h2 {
+                font-size: 34px;
+            }
+
+            .successSub {
+                font-size: 14px;
+                margin-bottom: 40px;
+            }
+
+            .statsRow {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            .stat {
+                padding: 22px 15px;
+            }
+
+            .num {
+                font-size: 30px;
+            }
+
+            .lbl {
+                font-size: 13px;
+            }
+
+            .stripTitle {
+                font-size: 26px;
+            }
+
+            .logoPill {
+                min-width: 170px;
+                padding: 14px 18px;
+            }
+
+            .logoText {
+                font-size: 14px;
+            }
+
+        }
+
+        @media(max-width:480px) {
+
+            .statsRow {
+                grid-template-columns: 1fr;
+            }
+
+            .successCard h2 {
+                font-size: 28px;
+            }
+
+            .num {
+                font-size: 26px;
+            }
+
+            .logoPill {
+                min-width: 150px;
+                padding: 12px 15px;
+            }
+
+            .logoImg {
+                width: 32px;
+                height: 32px;
+            }
+
+        }
+
+        /* ================ CLOUD / SERVICES SECTION =========================== */
+        .cloud {
+            padding: 80px 8%;
+            text-align: center;
+            background: #fff;
+        }
+
+        .cloud h2 {
+            font-size: 34px;
+            margin-bottom: 15px;
+            color: darkblue;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .cloud h2 span {
+            color: var(--primary);
+        }
+
+        .cloud p {
+            color: var(--text-gray);
+            margin-bottom: 50px;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding-bottom: 50px;
+        }
+
+        .service-card {
+            background: #ffffff;
+            border-radius: 25px;
+            padding: 50px 35px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            cursor: pointer;
+            transition: var(--transition);
+            border: 1px solid #f0f0f0;
+            animation: slideUp 0.6s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .service-card:hover {
+            transform: translateY(-20px);
+            box-shadow: 0 35px 70px rgba(0, 0, 0, 0.15);
+            border-color: var(--light-teal);
+            background: linear-gradient(135deg, #ffffff 0%, #f0fffe 100%);
+        }
+
+        .service-card h3 {
+            margin: 25px 0 15px;
+            font-size: 20px;
+            line-height: 1.4;
+            color: var(--dark-blue);
+        }
+
+        .service-card p {
+            color: var(--text-gray);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin: auto;
+            color: #fff;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        .service-card:hover .icon {
+            transform: scale(1.15) rotateZ(10deg);
+        }
+
+        .blue {
+            background: linear-gradient(135deg, #5b7cff, #3a5ceb);
+        }
+
+        .green {
+            background: linear-gradient(135deg, #1cc7a6, #149e83);
+        }
+
+        .sky {
+            background: linear-gradient(135deg, #33b6ff, #1a9cff);
+        }
+
+        /* ============== WHAT SECTION ================ */
+        .what {
+            text-align: center;
+            padding: 90px 10%;
+        }
+
+        .what h2 {
+            font-size: 38px;
+            color: #2b2b7c;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .what h2 span {
+            color: #00c6a7;
+        }
+
+        .what p {
+            max-width: 820px;
+            margin: 20px auto 60px;
+            line-height: 1.7;
+            text-align: center;
+            color: #3da3a3;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 480px;
+            height: 280px;
+            border-radius: 18px;
+            position: relative;
+            overflow: hidden;
+            animation: slideUp 0.6s ease-out;
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .card:hover img {
+            transform: scale(1.1);
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.45);
+            z-index: 1;
+            transition: var(--transition);
+        }
+
+        .card:hover::before {
+            background: rgba(0, 0, 0, 0.35);
+        }
+
+        .instructor {
+            background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), linear-gradient(120deg, #4facfe, #00f2fe);
+        }
+
+        .student {
+            background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), linear-gradient(120deg, #43e97b, #38f9d7);
+        }
+
+        .overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        .overlay h3 {
+            font-size: 22px;
+            margin-bottom: 16px;
+            letter-spacing: 1px;
+        }
+
+        .overlay button {
+            padding: 12px 30px;
+            border-radius: 30px;
+            border: 2px solid #fff;
+            background: transparent;
+            color: #fff;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 600;
+        }
+
+        .overlay button:hover {
+            background: #fff;
+            color: #000;
+            transform: scale(1.1);
+        }
+
+        .overlay .blue {
+            background: #2db5f9;
+            border: none;
+        }
+
+        .overlay .blue:hover {
+            background: #1595d8;
+            color: #fff;
+        }
+
+        /* ================ EVERYTHING SECTION =========================== */
+        .everything {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            padding: 90px 10%;
+        }
+
+        .left {
+            flex: 1;
+            animation: fadeInLeft 0.8s ease-out;
+        }
+
+        .left h2 {
+            font-size: 34px;
+            color: #2b2b7c;
+        }
+
+        .left h2 span {
+            color: #00c6a7;
+        }
+
+        .left p {
+            margin: 22px 0;
+            line-height: 1.7;
+            color: #3da3a3;
+        }
+
+        .left a {
+            color: #888;
+            text-decoration: underline;
+            transition: var(--transition);
+        }
+
+        .left a:hover {
+            color: var(--primary);
+            text-decoration-color: var(--primary);
+        }
+
+        .right {
+            flex: 1;
+            animation: fadeInRight 0.8s ease-out;
+        }
+
+        .video-box video {
+            width: 100%;
+            height: 290px;
+            border-radius: 20px;
+            background: linear-gradient(120deg, #667eea, #49bcbc);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            transition: var(--transition);
+        }
+
+        .video-box video:hover {
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+        }
+
+        /* ================ FEATURES SECTION =========================== */
+        .features-ui {
+            padding: 90px 10%;
+            text-align: center;
+        }
+
+        .features-ui h2 {
+            font-size: 36px;
+            color: #2b2b7c;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .features-ui span {
+            color: #00c6a7;
+        }
+
+        .features-ui .subtitle {
+            margin-top: 15px;
+            color: #888;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .features-content {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin-top: 70px;
+        }
+
+        .ui-box {
+            flex: 1;
+            animation: fadeInLeft 0.8s ease-out;
+        }
+
+        .ui-box img {
+            width: 100%;
+            border-radius: 18px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+            transition: var(--transition);
+        }
+
+        .ui-box img:hover {
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.2);
+            transform: translateY(-10px);
+        }
+
+        .ui-text {
+            flex: 1;
+            text-align: left;
+            animation: fadeInRight 0.8s ease-out;
+        }
+
+        .ui-text h3 {
+            font-size: 30px;
+            color: #2b2b7c;
+            margin-bottom: 25px;
+        }
+
+        .ui-text ul {
+            list-style: none;
+        }
+
+        .ui-text li {
+            margin-bottom: 18px;
+            padding-left: 30px;
+            position: relative;
+            color: #666;
+            line-height: 1.6;
+            transition: var(--transition);
+        }
+
+        .ui-text li:hover {
+            color: var(--primary);
+            transform: translateX(10px);
+        }
+
+        .ui-text li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: #00c6a7;
+            font-weight: bold;
+        }
+
+        /* ================ TOOLS SECTION =========================== */
+        .tools {
+            padding: 80px 10%;
+        }
+
+        .tools-content {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .tools-text {
+            flex: 1;
+            animation: fadeInLeft 0.8s ease-out;
+        }
+
+        .tools-text h2 {
+            font-size: 34px;
+            color: #2b2b7c;
+        }
+
+        .tools-text span {
+            color: #00c6a7;
+        }
+
+        .tools-text p {
+            margin-top: 20px;
+            line-height: 1.7;
+            color: #666;
+        }
+
+        .tools-image {
+            flex: 1;
+            position: relative;
+            text-align: center;
+            animation: fadeInRight 0.8s ease-out;
+        }
+
+        .tools-image img {
+            height: 450px;
+            width: 600px;
+            position: relative;
+            z-index: 2;
+            border-radius: 25px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+            transition: var(--transition);
+        }
+
+        .tools-image img:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.25);
+        }
+
+        /* ================ FEATURE BLOCK SECTION =========================== */
+        .feature-block {
+            display: flex;
+            align-items: center;
+            gap: 70px;
+            padding: 80px 10%;
+        }
+
+        .feature-block.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .feature-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .feature-image img {
+            width: 80%;
+            border-radius: 20px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+            transition: var(--transition);
+            animation: slideUp 0.6s ease-out;
+        }
+
+        .feature-image img:hover {
+            transform: translateY(-15px) scale(1.05);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-text {
+            flex: 1;
+            animation: fadeInRight 0.8s ease-out;
+        }
+
+        .feature-block.reverse .feature-text {
+            animation: fadeInLeft 0.8s ease-out;
+        }
+
+        .feature-text h2 {
+            font-size: 34px;
+            color: #2b2b7c;
+            line-height: 1.3;
+        }
+
+        .feature-text h2 span {
+            color: #00c6a7;
+        }
+
+        .feature-text p {
+            margin-top: 20px;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .features_button {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .features_button button {
+            padding: 18px 45px;
+            border-radius: 40px;
+            border: none;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            background: linear-gradient(135deg, #00c6a7, #49bcbc);
+            color: #fff;
+            box-shadow: 0 15px 30px rgba(0, 198, 167, 0.35);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .features_button button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: left 0.5s ease;
+        }
+
+        .features_button button:hover::before {
+            left: 100%;
+        }
+
+        .features_button button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 25px 50px rgba(0, 198, 167, 0.55);
+            background: linear-gradient(135deg, #49bcbc, #00c6a7);
+        }
+
+        /* ========================= SECTION ========================= */
+
+        .explore-section,
+        .explore,
+        .tg-course-section {
+            padding: 80px 6%;
+            background: #eef3f8;
+        }
+
+        .content,
+        .row,
+        .tg-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        /* ======================== LEFT COLOR CARDS ========================= */
+
+        .stack,
+        .tags,
+        .tg-tabs {
+            display: flex;
+            gap: 14px;
+            align-items: flex-end;
+        }
+
+        .stack a,
+        .tags a,
+        .tg-tabs a {
+            text-decoration: none;
+        }
+
+        .stack-card,
+        .tag,
+        .tab {
+            width: 72px;
+            height: 240px;
+            border-radius: 20px;
+            color: #fff;
+            font-weight: 700;
+            font-size: 14px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+
+            transform: rotate(4deg);
+            transition: .3s;
+        }
+
+        .stack-card:hover,
+        .tag:hover,
+        .tab:hover {
+            transform: rotate(0deg) translateY(-10px);
+        }
+
+        /* COLORS */
+
+        .orange {
+            background: #ff7b00;
+        }
+
+        .pink {
+            background: #f87878;
+        }
+
+        .brown {
+            background: #b5651d;
+        }
+
+        .yellow {
+            background: #f8b500;
+        }
+
+        .purple {
+            background: #9b6de5;
+        }
+
+        .blue {
+            background: #1e9be2;
+        }
+
+        .green {
+            background: #39c86d;
+        }
+
+        .teal {
+            background: #58b7b1;
+        }
+
+        /* ========================= CARD DESIGN ========================= */
+
+        .course-card,
+        .tg-card {
+            background: #fff;
+            border-radius: 28px;
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            width: 560px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .05);
+        }
+
+        .course-img img,
+        .card-image img {
+            width: 170px;
+            height: 230px;
+            object-fit: cover;
+            border-radius: 22px;
+        }
+
+        .course-info,
+        .card-content {
+            flex: 1;
+        }
+
+        .course-info h5,
+        .card-content h5 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: darkblue;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .course-info p,
+        .card-content p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        .rating {
+            margin: 10px 0;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1d2d7d;
+        }
+
+        .price-row button {
+            background: white;
+            color: #00bfe7;
+            border: 2px solid #00bfe7;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .price-row button:hover {
+            background: #00bfe7;
+            color: white;
+        }
+
+        /* =========================
+   HEADING
+========================= */
+
+        h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: darkblue;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        h2 span {
+            color: #54c5c3;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .header-row,
+        .tg-header,
+        .explore-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .see-all {
+            text-decoration: none;
+            color: #00bfe7;
+            font-weight: 700;
+        }
+
+        /* =========================
+   TESTIMONIAL
+========================= */
+
+        .testimonial-section {
+            background: #eef3f8;
+            padding: 100px 6%;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .test-left {
+            flex: 1;
+        }
+
+        .test-right {
+            flex: 1;
+            position: relative;
+        }
+
+        .main-img-wrapper img {
+            width: 100%;
+            border-radius: 25px;
+        }
+
+        .quote-card {
+            position: absolute;
+            bottom: -40px;
+            left: 40px;
+            width: 80%;
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .1);
+        }
+
+        .next-btn {
+            position: absolute;
+            right: -20px;
+            top: 50%;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: #00bfe7;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        /* =========================
+   MOBILE
+========================= */
+
+        @media(max-width:991px) {
+
+            .content,
+            .row,
+            .tg-row,
+            .testimonial-section {
+                flex-direction: column;
+            }
+
+            .stack,
+            .tags,
+            .tg-tabs {
+                width: 100%;
+                overflow-x: auto;
+                padding-bottom: 15px;
+            }
+
+            .stack-card,
+            .tag,
+            .tab {
+                width: 60px;
+                height: 180px;
+                flex-shrink: 0;
+            }
+
+            .course-card,
+            .tg-card {
+                width: 100%;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .course-img img,
+            .card-image img {
+                width: 100%;
+                height: 250px;
+            }
+
+            .price-row {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            h2 {
+                font-size: 32px;
+            }
+
+            .quote-card {
+                position: static;
+                width: 100%;
+                margin-top: 20px;
+            }
+
+            .next-btn {
+                display: none;
+            }
+        }
+
+
+
+        /* TESTIMONIAL SECTION */
+        .testimonial-section {
+            padding: 100px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .test-left {
+            width: 45%;
+            animation: fadeInLeft 0.8s ease-out;
+        }
+
+        .test-left .tagline {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 14px;
+            letter-spacing: 2px;
+            color: var(--text-gray);
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .test-left .tagline span {
+            width: 50px;
+            height: 1px;
+            background: var(--text-gray);
+        }
+
+        .test-left h2 {
+            font-size: 45px;
+            color: var(--dark-blue);
+            margin-bottom: 25px;
+        }
+
+        .test-left p {
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .outline-btn {
+            border: 1px solid var(--primary);
+            background: transparent;
+            color: var(--primary);
+            padding: 15px 35px;
+            border-radius: 35px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: var(--transition);
+            font-size: 15px;
+        }
+
+        .outline-btn:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(73, 187, 189, 0.3);
+        }
+
+        .test-right {
+            width: 50%;
+            position: relative;
+            animation: fadeInRight 0.8s ease-out;
+        }
+
+        .main-img-wrapper {
+            position: relative;
+            width: 75%;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .main-img-wrapper img {
+            width: 100%;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .main-img-wrapper:hover img {
+            transform: scale(1.05);
+        }
+
+        .quote-card {
+            position: absolute;
+            bottom: -80px;
+            right: -40px;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            width: 400px;
+            border-left: 5px solid #ff7c7c;
+            transition: var(--transition);
+            animation: slideUp 0.8s ease-out 0.4s both;
+        }
+
+        .quote-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+        }
+
+        .quote-card p {
+            font-size: 14px;
+            color: var(--text-gray);
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .quote-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .quote-footer h4 {
+            color: var(--dark-blue);
+            font-size: 16px;
+        }
+
+        .stars {
+            color: #ffa500;
+            font-size: 14px;
+        }
+
+        .next-btn {
+            position: absolute;
+            right: 90px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            color: var(--primary);
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            z-index: 5;
+            transition: var(--transition);
+            font-size: 24px;
+        }
+
+        .next-btn:hover {
+            color: darkblue;
+            background-color: #c4dddc;
+            transform: translateY(-50%) scale(1.15);
+        }
+
+        /* NEWS SECTION */
+        .news-section {
+            padding: 100px 8%;
+        }
+
+        .news-header {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .news-header h2 {
+            font-size: 34px;
+            color: var(--dark-blue);
+            margin-bottom: 15px;
+        }
+
+        .news-header h2 span {
+            color: #49bcbc;
+            font-weight: 600;
+        }
+
+        .news-header p {
+            color: var(--text-gray);
+            font-size: 16px;
+        }
+
+        .news-content {
+            display: flex;
+            gap: 50px;
+            align-items: flex-start;
+        }
+
+        .news-main {
+            flex: 1;
+            cursor: pointer;
+            animation: fadeInLeft 0.8s ease-out;
+        }
+
+        .main-card .img-container {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 25px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            transition: var(--transition);
+        }
+
+        .main-card .img-container:hover {
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+        }
+
+        .main-card .img-container img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .main-card .img-container:hover img {
+            transform: scale(1.08);
+        }
+
+        .news-badge {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: #49bcbc;
+            color: white;
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 600;
+            animation: slideUp 0.6s ease-out;
+        }
+
+        .main-text h3 {
+            font-size: 24px;
+            color: var(--dark-blue);
+            margin-bottom: 15px;
+            line-height: 1.4;
+            transition: var(--transition);
+        }
+
+        .main-text h3:hover {
+            color: var(--primary);
+        }
+
+        .main-text p {
+            color: var(--text-gray);
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .read-more-link {
+            color: var(--text-gray);
+            text-decoration: underline;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .read-more-link:hover {
+            color: darkblue;
+            cursor: pointer;
+            text-decoration-color: var(--primary);
+        }
+
+        .news-sidebar {
+            flex: 1.5;
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+            animation: fadeInRight 0.8s ease-out;
+        }
+
+        .side-item {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            transition: var(--transition);
+            padding: 15px;
+            border-radius: 15px;
+        }
+
+        .side-item:hover {
+            background-color: #ebf1f1;
+            transform: translateX(10px);
+        }
+
+        .side-img {
+            position: relative;
+            flex-shrink: 0;
+            width: 220px;
+            height: 150px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .side-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .side-item:hover .side-img img {
+            transform: scale(1.1);
+        }
+
+        .news-badge.mini {
+            bottom: 10px;
+            left: 10px;
+            font-size: 10px;
+            padding: 4px 12px;
+        }
+
+        .side-text h4 {
+            font-size: 18px;
+            color: var(--dark-blue);
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .side-text p {
+            font-size: 14px;
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+
+        /* ===== FOOTER ===== */
+        .tg-footer {
+            background: #1a1b2e;
+            color: #fff;
+            padding: 0;
+        }
+
+        .tg-footer-contact-bar {
+            background: #49bbbd;
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 0;
+            font-weight: 500;
+            flex-wrap: wrap;
+            animation: slideDown 0.6s ease-out;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+
+        .contact-item:hover {
+            transform: scale(1.05);
+        }
+
+        .contact-item i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .tg-footer-main {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr 1.2fr;
+            gap: 40px;
+            padding: 60px 20px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .tg-footer-col h4 {
+            color: #49bbbd;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .tg-footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .tg-footer-col ul li {
+            margin-bottom: 15px;
+        }
+
+        .tg-footer-col ul li a {
+            color: #adb5bd;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .tg-footer-col ul li a:hover {
+            color: #fff;
+            padding-left: 8px;
+            transform: translateX(5px);
+        }
+
+        .footer-newsletter {
+            margin-top: 30px;
+        }
+
+        .tg-sub-form {
+            display: flex;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 5px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+        }
+
+        .tg-sub-form:hover {
+            border-color: #49bbbd;
+            background: rgba(73, 187, 189, 0.1);
+        }
+
+        .tg-sub-form input {
+            background: transparent;
+            border: none;
+            color: #fff;
+            padding: 10px;
+            flex: 1;
+            outline: none;
+        }
+
+        .tg-sub-form button {
+            background: #49bbbd;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            color: white;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 600;
+        }
+
+        .tg-sub-form button:hover {
+            background: #3a9a9b;
+            transform: scale(1.05);
+        }
+
+        .tg-social-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .tg-social-links a {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            color: #fff;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+        }
+
+        .tg-social-links a:hover {
+            transform: translateY(-5px) scale(1.15);
+            background: #49bbbd;
+        }
+
+        .tg-footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 25px 0;
+            background: #151628;
+        }
+
+        .bottom-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 1200px) {
+            .hero {
+                flex-direction: column;
+                padding-top: 120px;
+                padding: 60px 5% 60px;
+            }
+
+            .hero-left,
+            .hero-right {
+                width: 100%;
+            }
+
+            .hero-left h1 {
+                font-size: 42px;
+            }
+
+            .student-img {
+                width: 100%;
+                max-width: 450px;
+                height: auto;
+            }
+
+            .everything {
+                flex-direction: column;
+                padding: 60px 8%;
+            }
+
+            .left,
+            .right {
+                width: 100%;
+            }
+
+            .features-content {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .ui-box,
+            .ui-text {
+                width: 100%;
+            }
+
+            .tools-content {
+                flex-direction: column;
+            }
+
+            .tools-image img {
+                width: 100%;
+                height: auto;
+                max-width: 600px;
+            }
+
+            .feature-block,
+            .feature-block.reverse {
+                flex-direction: column;
+                gap: 40px;
+                padding: 60px 8%;
+            }
+
+            .feature-image img {
+                width: 100%;
+            }
+
+            .feature-text {
+                width: 100%;
+            }
+
+            .testimonial-section {
+                flex-direction: column;
+                padding: 60px 8%;
+            }
+
+            .test-left,
+            .test-right {
+                width: 100%;
+            }
+
+            .quote-card {
+                position: relative;
+                bottom: auto;
+                right: auto;
+                width: 100%;
+            }
+
+            .next-btn {
+                position: static;
+                transform: none;
+                margin-top: 20px;
+            }
+
+            .news-content {
+                flex-direction: column;
+            }
+
+            .news-main,
+            .news-sidebar {
+                width: 100%;
+            }
+
+            .tg-footer-main {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+                padding: 40px 20px;
+            }
+
+            .cards {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 100%;
+                max-width: 480px;
+            }
+
+            .content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .course-card {
+                width: 100%;
+                max-width: 500px;
+            }
+
+            .stack {
+                flex-wrap: wrap;
+            }
+
+
+
+            nav {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 15px 5%;
+            }
+
+            .logo img {
+                height: 50px;
+            }
+
+            .nav-btns {
+                gap: 8px;
+            }
+
+            .nav-btns button {
+                padding: 10px 15px;
+                font-size: 12px;
+            }
+
+            .hero-left h1 {
+                font-size: 32px;
+            }
+
+            .hero-left p {
+                font-size: 16px;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .primary-btn {
+                padding: 12px 30px;
+                font-size: 13px;
+                width: 100%;
+            }
+
+            .watch {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .float-card {
+                padding: 12px;
+                font-size: 12px;
+                display: none;
+            }
+
+            .card1,
+            .card2 {
+                display: none;
+            }
+
+            .card3 {
+                display: block;
+            }
+
+            .card3 button {
+                padding: 6px 15px;
+                font-size: 11px;
+            }
+
+            .success {
+                padding: 60px 5%;
+            }
+
+            .success h2 {
+                font-size: 28px;
+            }
+
+            .stats {
+                gap: 20px;
+            }
+
+            .stats h3 {
+                font-size: 32px;
+            }
+
+            .cloud {
+                padding: 60px 5%;
+            }
+
+            .cloud h2 {
+                font-size: 26px;
+            }
+
+            .services {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .what {
+                padding: 60px 5%;
+            }
+
+            .what h2 {
+                font-size: 28px;
+            }
+
+            .card {
+                width: 100%;
+                height: 250px;
+            }
+
+            .overlay h3 {
+                font-size: 18px;
+            }
+
+            .ui-text h3 {
+                font-size: 22px;
+            }
+
+            .feature-text h2 {
+                font-size: 26px;
+            }
+
+            .left h2 {
+                font-size: 26px;
+            }
+
+            .test-left h2 {
+                font-size: 32px;
+            }
+
+            .tg-footer-main {
+                grid-template-columns: 1fr;
+                padding: 30px 15px;
+            }
+
+            .news-section {
+                padding: 60px 5%;
+            }
+
+            .side-item {
+                flex-direction: column;
+            }
+
+            .side-img {
+                width: 100%;
+            }
+
+            .tools-image img {
+                height: 300px;
+                width: 100%;
+            }
+
+            .quote-card {
+                width: 100%;
+            }
+
+            .main-card .img-container img {
+                height: 250px;
+            }
+
+            .tg-footer-contact-bar {
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px 0;
+            }
+
+            .bottom-container {
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar {
+                padding: 12px 3%;
+            }
+
+            .logo img {
+                height: 45px;
+            }
+
+            .nav-btns button {
+                padding: 8px 12px;
+                font-size: 11px;
+            }
+
+            .hero {
+                padding-top: 100px;
+                padding: 40px 3% 40px;
+            }
+
+            .hero-left h1 {
+                font-size: 26px;
+                line-height: 1.3;
+            }
+
+            .hero-left p {
+                font-size: 14px;
+                margin: 15px 0;
+            }
+
+            .primary-btn {
+                padding: 10px 20px;
+                font-size: 12px;
+            }
+
+            .play {
+                width: 35px;
+                height: 35px;
+            }
+
+            .success {
+                padding: 40px 3%;
+            }
+
+            .success h2 {
+                font-size: 24px;
+            }
+
+            .sub {
+                font-size: 14px;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .stat-item h3 {
+                font-size: 28px;
+            }
+
+            .stat-item p {
+                font-size: 13px;
+            }
+
+            .cloud {
+                padding: 40px 3%;
+            }
+
+            .cloud h2 {
+                font-size: 22px;
+            }
+
+            .service-card {
+                padding: 30px 20px;
+            }
+
+            .icon {
+                width: 60px;
+                height: 60px;
+                font-size: 24px;
+            }
+
+            .what {
+                padding: 40px 3%;
+            }
+
+            .what h2 {
+                font-size: 24px;
+            }
+
+            .cards {
+                flex-direction: column;
+            }
+
+            .card {
+                width: 100%;
+                height: 200px;
+            }
+
+            .overlay h3 {
+                font-size: 16px;
+            }
+
+            .overlay button {
+                padding: 8px 20px;
+                font-size: 12px;
+            }
+
+            .everything {
+                padding: 40px 3%;
+            }
+
+            .left h2 {
+                font-size: 22px;
+            }
+
+            .left p {
+                font-size: 14px;
+            }
+
+            .video-box video {
+                height: 200px;
+            }
+
+            .features-ui {
+                padding: 40px 3%;
+            }
+
+            .features-ui h2 {
+                font-size: 22px;
+            }
+
+            .ui-text h3 {
+                font-size: 18px;
+            }
+
+            .ui-text li {
+                font-size: 13px;
+                margin-bottom: 12px;
+            }
+
+            .tools {
+                padding: 40px 3%;
+            }
+
+            .tools-text h2 {
+                font-size: 22px;
+            }
+
+            .tools-image img {
+                height: 250px;
+            }
+
+            .feature-block {
+                padding: 40px 3%;
+                gap: 30px;
+            }
+
+            .feature-text h2 {
+                font-size: 20px;
+            }
+
+            .features_button button {
+                padding: 12px 30px;
+                font-size: 13px;
+            }
+
+            .explore-section {
+                padding: 40px 3%;
+            }
+
+            .stack-card {
+                width: 60px;
+                height: 200px;
+            }
+
+            .course-card {
+                flex-direction: column;
+                width: 100%;
+                padding: 15px;
+            }
+
+            .course-img img {
+                width: 100%;
+                height: 150px;
+            }
+
+            .course-info {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+
+            .course-info h3 {
+                font-size: 16px;
+            }
+
+            .course-info p {
+                font-size: 13px;
+            }
+
+            .testimonial-section {
+                padding: 40px 3%;
+            }
+
+            .test-left h2 {
+                font-size: 26px;
+            }
+
+            .test-left p {
+                font-size: 14px;
+            }
+
+            .outline-btn {
+                padding: 12px 25px;
+                font-size: 13px;
+            }
+
+            .main-img-wrapper {
+                width: 100%;
+            }
+
+            .quote-card {
+                padding: 20px;
+                font-size: 12px;
+            }
+
+            .news-section {
+                padding: 40px 3%;
+            }
+
+            .news-header h2 {
+                font-size: 22px;
+            }
+
+            .main-card .img-container img {
+                height: 200px;
+            }
+
+            .main-text h3 {
+                font-size: 18px;
+            }
+
+            .side-img {
+                width: 100%;
+                height: 120px;
+            }
+
+            .side-text h4 {
+                font-size: 15px;
+            }
+
+            .side-text p {
+                font-size: 13px;
+            }
+
+            .tg-footer-main {
+                gap: 20px;
+                padding: 20px 10px;
+            }
+
+            .tg-footer-col h4 {
+                font-size: 14px;
+            }
+
+            .tg-footer-col ul li a {
+                font-size: 13px;
+            }
+
+            .tg-social-links a {
+                width: 30px;
+                height: 30px;
+            }
+
+            .tg-sub-form input {
+                padding: 8px;
+                font-size: 12px;
+            }
+
+            .tg-sub-form button {
+                padding: 8px 15px;
+                font-size: 12px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- ===================== NAVBAR ==================== -->
+    <header class="navbar">
+        <div class="logo"><a href="home_page.html"><img src="/img/logo_2.png" alt=""></a></div>
+        <nav class="hidden-mobile">
+            <a href="./home_page.html">Home</a>
+            <a href="./courses_page.html">Courses</a>
+            <a href="./careers_page.html">Careers</a>
+            <a href="./blog_page.html">Blog</a>
+            <a href="./about_page.html">About Us</a>
+        </nav>
+        <div class="nav-btns">
+            <a href="./login_signup.html"><button class="login">Login</button></a>
+            <a href="./login_signup.html"><button class="signup">Sign Up</button></a>
+        </div>
+    </header>
+
+    <!-- =============hero section ===============-->
+    <section class="hero">
+        <div class="hero-left">
+            <h1>
+                <span class="dark_blue">Studying</span> Online is now <br>
+                much easier
+            </h1>
+            <p>
+                Talent Grow is a modern IT training system designed to help you master
+                industry skills through interactive labs and expert mentorship.
+            </p>
+            <div class="hero-actions">
+                <button class="primary-btn">Join for free</button>
+                <div class="watch">
+                    <span class="play" style="font-size: 15px;">▶</span>
+                    <span style="font-weight: 600;">Watch how it works</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <img src="/img/girl_with_copy_in_her_hand_student-removebg-preview.png" alt="Student Learning"
+                class="student-img">
+
+            <div class="float-card card1">
+                📊 <b>250k</b> Assisted Students
+            </div>
+            <div class="float-card card2">
+                📧 <b>Congratulations</b><br>
+                <small>Your admission is completed</small>
+            </div>
+            <div class="float-card card3">
+                👩‍🏫 <b>UX/UI Design Class</b> <br>
+                <small>Today at 12:00 PM</small><br>
+                <button>Join Now</button>
+            </div>
+        </div>
+
+        <svg class="curve" preserveAspectRatio="none" viewBox="0 0 1440 120">
+            <path fill="#f9fbff" d="M0,64L1440,128L1440,0L0,0Z" transform="rotate(180 720 90)"></path>
+        </svg>
+    </section>
+
+    <section class="successSec" id="success">
+        <div class="wrap">
+            <div class="successCard">
+                <h2><span style="color: #3da3a3">Our </span>Success</h2>
+                <p class="successSub">
+                    SkillEdge delivers industry-ready training with live classes,
+                    mentorship, and project-based learning—crafted with a royal, premium
+                    experience.
+                </p>
+
+                <div class="statsRow">
+                    <div class="stat">
+                        <div class="num">
+                            <span class="count" data-target="15000">0</span><span class="suffix">+</span>
+                        </div>
+                        <div class="lbl">Students</div>
+                    </div>
+
+                    <div class="stat">
+                        <div class="num">
+                            <span class="count" data-target="75">0</span><span class="suffix">%</span>
+                        </div>
+                        <div class="lbl">Total success</div>
+                    </div>
+
+                    <div class="stat">
+                        <div class="num">
+                            <span class="count" data-target="35">0</span>
+                        </div>
+                        <div class="lbl">Main questions</div>
+                    </div>
+
+                    <div class="stat">
+                        <div class="num">
+                            <span class="count" data-target="26">0</span>
+                        </div>
+                        <div class="lbl">Chief experts</div>
+                    </div>
+
+                    <div class="stat">
+                        <div class="num">
+                            <span class="count" data-target="16">0</span>
+                        </div>
+                        <div class="lbl">Years of experience</div>
+                    </div>
+                </div>
+
+                <section>
+                    <div class="logoStrip proStrip" aria-label="Trusted by top companies">
+                        <div class="stripHead">
+                            <div class="stripTitle">Trusted by</div>
+                            <div class="stripSub">Top companies & teams worldwide</div>
+                        </div>
+
+                        <div class="stripFade left" aria-hidden="true"></div>
+                        <div class="stripFade right" aria-hidden="true"></div>
+
+                        <div class="marquee" id="marquee" role="region" aria-label="Company logos marquee">
+                            <div class="track" id="track">
+                                <!-- ===== Set A ===== -->
+                                <div class="logoPill">
+                                    <img class="logoImg" src="https://img.icons8.com/color/48/google-logo.png"
+                                        alt="Google">
+                                    <span class="logoText">Google</span>
+                                </div>
+
+                                <div class="logoPill">
+                                    <img class="logoImg" src="https://img.icons8.com/color/48/microsoft.png"
+                                        alt="Microsoft">
+                                    <span class="logoText">Microsoft</span>
+                                </div>
+
+                                <div class="logoPill">
+                                    <img class="logoImg" src="https://img.icons8.com/color/48/amazon.png" alt="Amazon">
+                                    <span class="logoText">Amazon</span>
+                                </div>
+
+                                <div class="logoPill">
+                                    <img class="logoImg" src="https://img.icons8.com/ios-filled/50/mac-os.png"
+                                        alt="Apple">
+                                    <span class="logoText">Apple</span>
+                                </div>
+
+                                <div class="logoPill">
+                                    <img class="logoImg" src="https://img.icons8.com/color/48/ibm.png" alt="IBM">
+                                    <span class="logoText">IBM</span>
+                                </div>
+
+                                <div class="logoPill">
+                                    <img class="logoImg" src="https://cdn.simpleicons.org/accenture" alt="Accenture">
+                                    <span class="logoText">Accenture</span>
+                                </div>
+
+                                <div class="logoPill">
+                                    <img class="logoImg" src="https://img.icons8.com/ios-filled/500/meta.png"
+                                        alt="Deloitte">
+                                    <span class="logoText">Meta</span>
+                                </div>
+
+                                <div class="logoPill">
+                                    <img class="logoImg" src="https://cdn.simpleicons.org/infosys" alt="Infosys">
+                                    <span class="logoText">Infosys</span>
+                                </div>
+
+                                <div class="logoPill">
+                                    <img class="logoImg" src="https://cdn.simpleicons.org/tcs" alt="TCS">
+                                    <span class="logoText">TCS</span>
+                                </div>
+
+                                <div class="logoPill">
+                                    <img class="logoImg" src="https://cdn.simpleicons.org/wipro" alt="Wipro">
+                                    <span class="logoText">Wipro</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <section class="cloud">
+        <h2>All-In-One <span>Cloud Software</span></h2>
+        <p>Everything you need to manage your learning and growth in one place.</p>
+
+        <div class="services">
+            <div class="service-card">
+                <div class="icon blue">📄</div>
+                <h3>Online Billing,<br>Invoicing & Contracts</h3>
+                <p>Simple and secure control of your organization’s financial and legal transactions.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon green">📅</div>
+                <h3>Easy Scheduling &<br>Attendance Tracking</h3>
+                <p>Schedule classrooms and labs with one click. Keep detailed records effortlessly.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon sky">👥</div>
+                <h3>Student Tracking &<br>CRM Support</h3>
+                <p>Automate and track progress for individuals or groups. Keep everyone organized.</p>
+            </div>
+        </div>
+    </section>
+
+    <!--====================== WHAT IS TALENT GROW================ -->
+    <section class="what">
+        <h2>What is <span>Talent Grow?</span></h2>
+        <p>
+            Talent Grow is an IT Training Management System that helps institutes,
+            trainers and students manage online classes, assignments, exams,
+            attendance and progress — all in one secure platform.
+        </p>
+
+        <div class="cards">
+            <div class="card instructor">
+                <img src="/img/depositphotos_21862217-stock-photo-professor-assisting-students-in-class.jpg"
+                    alt="TRAINERS">
+                <div class="overlay">
+                    <h3>FOR TRAINERS</h3>
+                    <a href="./Trainer_Dashbord.html"><button>Start Training</button></a>
+                </div>
+            </div>
+
+            <div class="card student">
+                <img src="/img/istockphoto-1588288383-612x612.jpg" alt="STUDANT">
+                <div class="overlay">
+                    <h3>FOR STUDENTS</h3>
+                    <a href="./Students_Dashbord.html"><button class="blue">Join with Code</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= EVERYTHING SECTION ===================-->
+    <section class="everything">
+        <div class="left">
+            <h2>
+                Everything you can do in an offline institute,
+                <span>you can do with Talent Grow</span>
+            </h2>
+            <p>
+                Talent Grow helps IT institutes manage scheduling, attendance,
+                payments, online classes and student performance in one powerful,
+                cloud-based system.
+            </p>
+            <a href="#">Learn more</a>
+        </div>
+
+        <div class="right">
+            <div class="video-box">
+                <video autoplay muted loop playsinline src="/videos/class-video.mp4"></video>
+            </div>
+        </div>
+    </section>
+
+    <!--================== features-ui ===================== -->
+
+    <section class="features-ui">
+        <h2>Our <span>Features</span></h2>
+        <p class="subtitle">
+            These powerful features make IT training and learning more efficient
+        </p>
+
+        <div class="features-content">
+            <div class="ui-box">
+                <img src="/img/edited-photo.png" alt="Talent Grow UI">
+            </div>
+
+            <div class="ui-text">
+                <h3>A user <span>interface designed</span><br>for the classroom</h3>
+
+                <ul>
+                    <li>Trainers don’t get lost in grid view and have a dedicated teaching space.</li>
+                    <li>Mentors and presenters can be moved to the front easily.</li>
+                    <li>Trainers can monitor students and class data in real time.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============= tools ================= -->
+
+    <section class="tools">
+        <div class="tools-content">
+            <div class="tools-text">
+                <h2><span>Tools</span> For Teachers<br>And Learners</h2>
+                <p>
+                    Talent Grow provides a powerful set of tools for IT trainers
+                    and learners. Trainers can assign tasks in real time,
+                    track progress and manage submissions efficiently.
+                </p>
+            </div>
+
+            <div class="tools-image">
+                <img src="/img/Screenshot from 2026-01-30 01-57-11.png" alt="Student">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =================  feature-block  =============== -->
+
+    <section class="feature-block">
+        <div class="feature-image">
+            <img src="/img/Screenshot from 2026-01-30 02-36-27.png" alt="Assessments">
+        </div>
+
+        <div class="feature-text">
+            <h2>Assessments,<br><span>Quizzes</span>, Tests</h2>
+            <p>
+                Talent Grow allows trainers to easily launch live assignments,
+                quizzes and tests. Student results are automatically saved
+                in the online gradebook.
+            </p>
+        </div>
+    </section>
+
+
+    <section class="feature-block reverse">
+
+        <div class="feature-image">
+            <img src="/img/Screenshot from 2026-01-30 02-37-29.png" alt="Gradebook">
+        </div>
+
+
+        <div class="feature-text">
+            <h2><span>Class Management</span><br>Tools for Educators</h2>
+            <p>
+                Talent Grow provides powerful tools to manage classes such as
+                student roster, attendance and grading. Trainers can evaluate
+                tests and quizzes in real time using the gradebook.
+            </p>
+        </div>
+    </section>
+
+
+
+    <section class="feature-block">
+        <div class="feature-image">
+            <img src="/img/Screenshot from 2026-01-30 02-37-59.png">
+        </div>
+
+        <div class="feature-text">
+            <h2>One-on-One<br><span>Discussions</span></h2>
+            <p>
+                Trainers and mentors can have private conversations
+                with students without leaving the Talent Grow
+                virtual classroom environment.
+            </p>
+        </div>
+    </section>
+
+    <!-- BUTTON CENTER -->
+    <div class="features_button">
+        <button>See More Features</button>
+    </div>
+
+    <!-- ================ explore-section ======================== -->
+
+    <section class="explore-section">
+        <div class="container">
+
+            <h2>Explore <span> Courses</span></h2>
+            <p class="subtitle">
+                Talent Grow – Professional IT Training & Management System
+            </p>
+
+            <div class="header-row">
+                <span class="category">Talent Grow Programs</span>
+                <a href="./courses_page.html" class="see-all">SEE ALL →</a>
+            </div>
+
+            <div class="content">
+
+                <!-- LEFT SIDE STACK CARDS -->
+                <div class="stack">
+                    <a href="">
+                        <div class="stack-card orange">Web Design</div>
+                    </a>
+                    <a href="">
+                        <div class="stack-card pink">Python</div>
+                    </a>
+                    <a href="">
+                        <div class="stack-card brown">Java</div>
+                    </a>
+                    <a href="">
+                        <div class="stack-card yellow">React JS</div>
+                    </a>
+                    <a href="">
+                        <div class="stack-card purple">Node JS</div>
+                    </a>
+                    <a href="">
+                        <div class="stack-card blue">UI / UX</div>
+                    </a>
+                    <a href="">
+                        <div class="stack-card green">Data Science</div>
+                    </a>
+                </div>
+
+                <!-- RIGHT SIDE COURSE CARD -->
+                <div class="course-card">
+                    <div class="course-img">
+                        <img src="/img/Tech Stack for AI.jpeg" alt="course">
+                    </div>
+
+                    <div class="course-info">
+                        <h3>Full Stack Development</h3>
+                        <p>
+                            Learn complete web development with real projects,
+                            expert mentors & placement support.
+                        </p>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+
+                        <div class="price-row">
+                            <span class="price">₹15,000</span>
+                            <a href="./pricing.html"><button>BUY NOW</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--========== explore =========-->
+
+    <section class="explore">
+        <div class="explore-head">
+            <h2>Practice <span>Questions</span> Series </h2>
+            <a href="./about_page.html" class="see-all">SEE ALL →</a>
+
+        </div>
+
+        <div class="row">
+
+            <!-- LEFT TAGS -->
+            <div class="tags">
+                <!-- <a href="">
+                    <div class="tag pink">Frontend</div>
+                </a> -->
+                <a href="">
+                    <div class="tag brown">Backend</div>
+                </a>
+                <a href="">
+                    <div class="tag yellow">Full Stack</div>
+                </a>
+                <!-- <a href="">
+                    <div class="tag purple">React</div>
+                </a> -->
+                <a href="">
+                    <div class="tag blue">Node</div>
+                </a>
+                <a href="">
+                    <div class="tag green">Python</div>
+                </a>
+            </div>
+
+            <!-- CENTER CARD -->
+
+            <div class="course-card">
+                <div class="course-img">
+                    <img src="/img/AI-Generated Visual of GalTech’s Futuristic Tech Campus.jpeg" alt="course">
+                </div>
+
+                <div class="course-info">
+                    <h3>Questions Series<br>And Moke Interviews</h3>
+                    <p>
+                        Practice more. Learn faster. Succeed smarter.
+                        Build strong concepts, improve coding skills, and prepare for top IT careers.
+                    </p>
+                    <div class="rating">⭐⭐⭐⭐⭐ </div>
+
+                    <div class="price-row">
+                        <span class="price">₹9,990</span>
+                        <a href="./pricing.html"><button>BUY NOW</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT TAGS -->
+            <div class="tags">
+                <a href="">
+                    <div class="tag teal">DevOps</div>
+                </a>
+                <a href="">
+                    <div class="tag green">Testing</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================== tg-course-section  ========================== -->
+
+    <section class="tg-course-section">
+
+        <!-- Header -->
+        <div class="tg-header">
+            <h2>All <span>Books</span></h2>
+            <a href="./about_page.html" class="see-all">SEE ALL →</a>
+        </div>
+
+        <!-- Content Row -->
+        <div class="tg-row">
+
+            <!-- Left Vertical Tabs -->
+            <div class="tg-tabs">
+                <a href="">
+                    <div class="tab orange">UI / UX</div>
+                </a>
+                <a href="">
+                    <div class="tab pink">Web Dev</div>
+                </a>
+                <a href="">
+                    <div class="tab brown">Java</div>
+                </a>
+            </div>
+
+            <!-- ======== Center Card ======== -->
+            <div class="tg-card">
+                <div class="card-image">
+                    <img src="/img/Python Coding_ 2 Books in 1_ Python Programming and Data Analytics.jpeg" alt="">
+                </div>
+
+                <div class="card-content">
+                    <h3>Python Beginner to advanced</h3>
+                    <p>
+                        Cras convallis lacus orci, tristique tincidunt magna
+                        fringilla at faucibus vel.
+                    </p>
+                    <div class="rating">⭐⭐⭐⭐⭐ </div>
+
+                    <div class="price-row">
+                        <span class="price">₹450</span>
+                        <a href="./pricing.html"><button>BUY NOW</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ====== Right Vertical Tabs =======-->
+            <div class="tg-tabs">
+                <a href="">
+                    <div class="tab yellow">Python</div>
+                </a>
+                <a href="">
+                    <div class="tab green">AI / ML</div>
+                </a>
+                <a href="">
+                    <div class="tab blue">React</div>
+                </a>
+                <a href="">
+                    <div class="tab teal">Node</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================== testimonial-section ====================-->
+
+    <section class="testimonial-section">
+        <div class="test-left">
+            <div class="tagline"> TESTIMONIAL</div>
+            <h2><span>What</span> They Say?</h2>
+            <p>Talent Grow has helped more than 100k+ students worldwide to achieve their dream careers in the IT
+                industry.
+            </p>
+            <p>Our interactive labs and expert mentorship have made learning both fun and effective for students and
+                teachers alike.</p>
+            <p>Are you ready to start? Share your experience with us.</p>
+            <button class="outline-btn"> Write your assessment <span
+                    style=" font-size: 25px; display: inline-flex; align-items: center; justify-content: center;">→</span>
+            </button>
+        </div>
+
+        <div class="test-right">
+            <div class="main-img-wrapper">
+                <img src="/img/Schnelle KI-Porträtfotos.jpeg" alt="Student">
+            </div>
+
+            <div class="next-btn">❯</div>
+
+            <div class="quote-card">
+                <p>"Thank you so much for your help. It's exactly what I've been looking for. You won't regret it. It
+                    really
+                    saves me time and effort. Talent Grow is exactly what my career was lacking."</p>
+                <div class="quote-footer">
+                    <div>
+                        <h4>Gloria Rose</h4>
+                        <div class="stars">★★★★★ <span style="color: gray; font-size: 12px;">12 reviews at Yelp</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================== NEWS SECTION ====================-->
+
+    <section class="news-section">
+        <div class="news-header">
+            <h2><span>Lastest News</span> and Resources</h2>
+            <p>See the developments that have occurred to Talent Grow in the world</p>
+        </div>
+
+        <div class="news-content">
+            <div class="news-main">
+                <div class="main-card">
+                    <div class="img-container">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
+                            alt="Main News">
+                        <span class="news-badge">NEWS</span>
+                    </div>
+                    <div class="main-text">
+                        <h3>Class adds $30 million to its balance sheet for a Zoom-friendly edtech solution</h3>
+                        <p>Class, launched less than a year ago by Blackboard co-founder Michael Chasen, integrates
+                            exclusively...
+                        </p>
+                        <a href="./blog_page.html" class="read-more-link">Read more</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-sidebar">
+                <a href="">
+                    <div class="side-item">
+                        <div class="side-img">
+                            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=400&q=80"
+                                alt="News 1">
+                            <span class="news-badge mini">PRESS RELEASE</span>
+                        </div>
+                        <div class="side-text">
+                            <h4>Class Technologies Inc. Closes $30 Million Series A Financing to Meet High Demand</h4>
+                            <p>Class Technologies Inc., the company that created Class,...</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="./about_page.html">
+                    <div class="side-item">
+                        <div class="side-img">
+                            <img src="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?auto=format&fit=crop&w=400&q=80"
+                                alt="News 2">
+                            <span class="news-badge mini">NEWS</span>
+                        </div>
+                        <div class="side-text">
+                            <h4>Zoom's earliest investors are betting millions on a better Zoom for schools</h4>
+                            <p>Zoom was never created to be a consumer product. Nonetheless, the...</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="./blog_page.html">
+                    <div class="side-item">
+                        <div class="side-img">
+                            <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=400&q=80"
+                                alt="News 3">
+                            <span class="news-badge mini">NEWS</span>
+                        </div>
+                        <div class="side-text">
+                            <h4>Former Blackboard CEO Raises $16M to Bring LMS Features to Zoom Classrooms</h4>
+                            <p>This year, investors have reaped big financial returns from betting on Zoom...</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!---======================== FOOTER ==============================---->
+    <div id="footer"></div>
+
+    <script src="./script/Include.js"></script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const counters = document.querySelectorAll(".count");
+
+            counters.forEach(counter => {
+
+                const target = +counter.getAttribute("data-target");
+                const duration = 2000; // 2 seconds
+                const increment = target / (duration / 16);
+
+                let current = 0;
+
+                const updateCounter = () => {
+
+                    current += increment;
+
+                    if (current < target) {
+                        counter.innerText = Math.floor(current).toLocaleString();
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.innerText = target.toLocaleString();
+                    }
+
+                };
+
+                updateCounter();
+
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
