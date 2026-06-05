@@ -23,6 +23,6 @@ async function loadComponent(id, file) {
 
 // IMPORTANT CALL
 window.addEventListener("DOMContentLoaded", () => {
-  loadComponent("navbar", "./Components/Navbar_B.html");
-  loadComponent("footer", "./Components/footer.html");
+  loadComponent("navbar", "./components/Navbar_B.html");
+  loadComponent("footer", "./components/footer.html");
 });
